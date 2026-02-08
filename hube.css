@@ -1,0 +1,173 @@
+.hube-main-screen {
+    width: 100%;
+    margin: 0;
+    border-radius: .8em;
+
+    & img {
+        width: 100%;
+        border-radius: .8em;
+    }
+}
+
+.context-text {
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+.hube-title {
+    margin-bottom: .2em;
+}
+
+.hube-title-text {
+    margin-bottom: .5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+table {
+    border-spacing: 0;
+
+    @media (max-width: 768px) {
+        font-size: 0.7em;
+    }
+
+    tr {
+
+        & th {
+            position: sticky;
+            top: 0px;
+            text-align: left;
+            border-bottom: 2px solid rgba(var(--text-color-RGB), 1);
+            padding-bottom: 0.3em;
+            background-color: rgba(var(--surface-color-RGB), 1);
+
+            @media (max-width: 768px) {
+                padding-top: 0.8em;
+            }
+        }
+
+
+        td {
+            padding: 0.8em 0.7em 1em 0;
+            border-bottom: 1px solid rgba(var(--text-color-RGB), 1);
+            vertical-align: top;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+
+        &:last-child {
+            & td {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+aside {
+    color: rgba(var(--text-color-RGB), 1);
+    background-color: rgba(var(--surface-color-RGB), 1);
+    padding: 0.8em 2.5em 1.75em 1em;
+    border-radius: 1em;
+}
+
+.hube-scene-1 {
+    width: 100%;
+    margin: 0;
+    border-radius: .8em;
+
+    & img {
+        width: 100%;
+        border-radius: .8em;
+    }
+}
+
+figcaption {
+    font-size: .8em;
+    opacity: 0.8;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    & p {
+        width: 50%;
+        padding-right: 2em;
+
+        &:last-child {
+            padding-right: .5em;
+        }
+    }
+}
+
+.poster-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+.poster-pesto {
+    width: 24em;
+    margin: 0;
+    margin-bottom: 3em;
+
+    & img {
+        width: 24em;
+    }
+}
+
+.poster-fish {
+    width: 15em;
+    margin: 0;
+    margin-bottom: 3em;
+
+    & img {
+        width: 15em;
+    }
+}
+
+.poster-episode {
+    width: 33em;
+    margin: 0;
+    margin-bottom: 3em;
+
+    & img {
+        width: 33em;
+    }
+}
+
+.poster-special {
+    width: 13em;
+    margin: 0;
+    margin-bottom: 3em;
+    margin-left: 25em;
+
+    & img {
+        width: 13em;
+    }
+}
+
+.poster-shat {
+    width: 13em;
+    margin: 0;
+    margin-bottom: 3em;
+
+    & img {
+        width: 13em;
+    }
+}
+
+.poster-trust {
+    width: 23em;
+    margin: 0;
+
+    & img {
+        width: 23em;
+    }
+}
