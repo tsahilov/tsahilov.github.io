@@ -87,6 +87,7 @@ body {
   position: relative;
   margin: 0 auto;
   width: 86%;
+  max-width: 1450px;
 
   @media (max-width: 768px) {
     width: 96%;
