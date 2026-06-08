@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,145 +12,139 @@
 <body>
     <div class="v-space S"></div>
     <div class="wrapper">
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="https://t.me/pepenguin">
+                    <span class="scramble-target">#telegram</span><span class="link-suffix"> [link]</span>
+                </a>
+                <a href="https://web.telegram.org/k/#@nedesigneralan">
+                    <span class="scramble-target">#my channel</span><span class="link-suffix"> [link]</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <!-- <a href="#" class="hover-scramble">rus</a> -->
+            </div>
+        </nav>
+
+        <div class="v-space M"></div>
+
         <header>
-            <h1 class="main-text">
-                <span class="header-storke-one">
-                    <span class="header-word">Tsahilov</span>
-                    <span class="header-word">Alan</span>
-                </span>
-                <span class="header-stroke-two">
-                    <span class="header-word a-group-desktop">
-                        <span class="a-stick"></span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word">a</span>
-                    </span>
-                    <span class="header-word a-group-mobile">
-                        <span class="a-stick"></span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word">a</span>
-                    </span>
-                    <span class="header-word">designer</span>
-                </span>
-            </h1>
+            <div class="head">
+                <div class="name-composition">
+                    <img src="./images/alan-tsahilov-desktop.svg" alt="Alan Tsahilov" class="name-svg desktop-only">
 
-            <div class="v-space M"></div>
-            <span class="header-photo">
-                <figure class="header-photo-fig">
-                    <img class="header-photo-img" src="./images/eyes.png" alt="">
-                </figure>
-            </span>
+                    <img src="./images/alan-tsahilov-mobile.svg" alt="Alan Tsahilov" class="name-svg mobile-only">
+
+                    <img src="./images/photo-desktop.webp" alt="Alan Photo" class="photo-abs desktop-only">
+
+                    <img src="./images/photo_mobile.webp" alt="Alan Photo" class="photo-abs mobile-only">
+                </div>
+            </div>
         </header>
+
+        <main>
+            <div class="v-space L"></div>
+
+            <section class="hero-offer">
+                <h1>
+                    <div class="text-width">
+                        <span class="text-secondary">Hello, i launch information products:</span> write texts, draw
+                        graphics
+                        and code websites.
+                    </div>
+                </h1>
+            </section>
+
+            <div class="v-space S"></div>
+
+            <section class="about-section">
+                <div class="accordion">
+                    <button class="accordion-header" id="accordion-btn">
+                        <span class="accordion-title">My achievements and hobby</span>
+                    </button>
+
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="content-padding accordion-grid">
+                                <p>In 2021, i graduated from some design college. Currently,
+                                    i am a first-stage student
+                                    at the Gorbunov Bureau School.</p>
+                                <p>Six years in the hospitality service industry across every possible role taught me
+                                    the kung fu of customer service — a skill i am now bringing into design.</p>
+                                <p>I also run my own Telegram channel and dream of drawing cartoons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio-section">
+                <div class="v-space L"></div>
+
+                <div class="filters-container">
+                    <button class="filter-btn hover-scramble is-active" data-filter="all">#all</button>
+                    <button class="filter-btn hover-scramble" data-filter="branding">#branding</button>
+                    <button class="filter-btn hover-scramble" data-filter="web">#web</button>
+                    <button class="filter-btn hover-scramble" data-filter="write">#write</button>
+                    <button class="filter-btn hover-scramble" data-filter="marketing">#marketing</button>
+                </div>
+
+                <div class="v-space M"></div>
+
+                <!-- Журнальная сетка -->
+                <div class="portfolio-editorial">
+
+                    <!-- РЯД 1 (Шестерка, Тройка, Тройка) -->
+                    <a href="#" class="case-card" data-categories="branding">
+                        <img src="./images/pesto_testo_16x10.webp" alt="Pesto and Testo Branding" class="case-visual">
+                        <div class="case-caption">
+                            <p>#branding #pesto&testo #gastro_hub</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="case-card" data-categories="marketing">
+                        <div class="case-visual" style="background-color: #E2D3A8;"></div>
+                        <div class="case-caption">
+                            <p>#marketing #pragmatica</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="case-card" data-categories="branding">
+                        <div class="case-visual" style="background-color: #00BA5D;"></div>
+                        <div class="case-caption">
+                            <p>#branding #package #filter_11</p>
+                        </div>
+                    </a>
+
+                    <!-- РЯД 2 (Четверка, Пятерка, Тройка) -->
+                    <a href="#" class="case-card" data-categories="write">
+                        <div class="case-visual" style="background-color: #2D00F7;"></div>
+                        <div class="case-caption">
+                            <p>#write #personal</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="case-card" data-categories="web">
+                        <div class="case-visual" style="background-color: #E1DAFF;"></div>
+                        <div class="case-caption">
+                            <p>#web #aviasales</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="case-card" data-categories="web">
+                        <div class="case-visual" style="background-color: #B91A1A;"></div>
+                        <div class="case-caption">
+                            <p>#web #photography</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
     </div>
 
-    <div class="v-space L"></div>
-    <div class="wrapper">
-        <h2 class="optional-text" id="works">
-            <span class="optional-word">my</span>
-            <span class="optional-word">works</span>
-            <!-- <span class="a-stick-center-desktop-one"></span> -->
-        </h2>
-    </div>
-
-    <div class="v-space M"></div>
-    <div class="wrapper">
-        <div class="content-grid">
-            <div class="content-stroke-one">
-                <a class="content-block-mini" href=#>
-                    <figure class="content-figure">
-                        <img class="content-image" src="./images/FILTER11-PREVIEW.jpg" alt="">
-                    </figure>
-                    <!-- <p class="content-label text">Filter11</p> -->
-                    <p class="text bold">Айдентика кофейни Filter11</p>
-                </a>
-                <a class="content-block-mini" href="pragmatica.html">
-                    <figure class="content-figure">
-                        <img class="content-image" src="./images/PRAGMATICA-PREVIEW.png" alt="">
-                    </figure>
-                    <!-- <p class="content-label text">PRAGMATICA</p> -->
-                    <p class="text bold">Рекламные креативы для чат-ботов PRAGMATICA</p>
-                </a>
-            </div>
-
-            <div class="content-stroke-two">
-                <a class="content-block-mini" href="longread.html">
-                    <figure class="content-figure">
-                        <img class="content-image" src="./images/STORY-PREVIEW.png" alt="">
-                    </figure>
-                    <!-- <p class="content-label text">PRAGMATICA</p> -->
-                    <p class="text bold">Ироничный лонгрид о наследии</p>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="v-space L"></div>
-    <div class="wrapper">
-        <h2 class="optional-text">
-            <!-- <span class="a-stick-center-desktop-two"></span> -->
-            <span class="optional-word">about</span>
-            <span class="optional-word">me</span>
-        </h2>
-    </div>
-
-    <div class="v-space M"></div>
-    <div class="wrapper">
-        <span class="about-me-block">
-            <p class="text">Привет, я &mdash; дизайнер Алан. Запускаю информационные продукты.</p>
-            <p class="text">Проектирую, верстаю и
-                запускаю сайты, например как этот. Сразу работаю с&nbsp;кодом, поэтому продукт может работать
-                с&nbsp;первых дней и&nbsp;развиваться параллельно.</p>
-            <p class="text">Создаю
-                постеры, афиши, обложки, пишу&nbsp;тексты, делаю анимации. Веду свой <a class="link bold"
-                    href="https://web.telegram.org/k/#@nedesigneralan" target="_blank">телеграм канал</a>,
-                в&nbsp;котором
-                рассказываю об&nbsp;исторических личностях в дизайне. Мечтаю
-                рисовать мультфильмы.</p>
-        </span>
-        <span class="about-me-block">
-            <p class="text bold"><a class="link" href="mailto:kipyatok06@yandex">kipyatok06@yandex.ru</a></p>
-            <p class="text bold"><a class="link" href="https://t.me/pepenguin">telegram</a></p>
-            <p class="text bold"><a class="link" href="#">linkedin</a></p>
-        </span>
-    </div>
-
-
-    <div class="v-space XL"></div>
-    <div class="wrapper">
-        <a class="link-two" href="https://t.me/pepenguin" target="_blank">
-            <h2 class="main-text">
-                <span class="bottom-storke-one">
-                    <span class="bottom-word">Call</span>
-                    <span class="bottom-word">me</span>
-                </span>
-
-                <span class="bottom-stroke-two">
-                    <span class="bottom-word a-group-desktop">
-                        <span class="a-word">to</span>
-                        <span class="a-word empty">a</span>
-                        <span class="a-word">work</span>
-                    </span>
-                    <span class="a-stick-bottom-desktop"></span>
-
-                    <span class="bottom-word a-group-mobile">
-                        <span class="a-word">to</span>
-                        <span class="a-word">work</span>
-                    </span>
-
-                    <!-- <span class="a-stick-bottom-mobile"></span> -->
-                </span>
-                </span>
-            </h2>
-        </a>
-    </div>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
