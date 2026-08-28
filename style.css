@@ -2,11 +2,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
-
 html {
     overflow-x: hidden;
 
@@ -37,7 +32,7 @@ html {
 
 body {
     font-family: "TT Norms Pro", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 auto;
     color: rgb(var(--text-color-RGB));
     background-color: rgb(var(--background-color-RGB));
@@ -45,7 +40,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 .wrapper {
@@ -54,7 +49,7 @@ body {
     width: 86%;
 
     @media (max-width: 768px) {
-        width: 98%;
+        width: 96%;
         margin: 0 auto;
     }
 }
@@ -125,7 +120,7 @@ body {
     :root {
         --main-text-size: 2rem;
         /* Было 1.7rem — сделали поменьше для заголовков */
-        --secondary-text-size: 1.7rem;
+        --secondary-text-size: 1.3rem;
         /* Было 1.2rem — поджали тексты описаний */
         --link-text-size: 1.3rem;
         /* Было 1rem — поджали размер ссылок */
@@ -222,7 +217,7 @@ body {
     margin: 1.6rem 0 0 0;
 
     @media (max-width: 768px) {
-        gap: 0.6rem;
+        gap: 0.3rem;
     }
 }
 
@@ -233,7 +228,7 @@ body {
     text-decoration: underline;
     text-decoration-color: rgba(var(--text-color-RGB), 0.3);
     text-decoration-thickness: 1px;
-    text-underline-offset: 8px;
+    text-underline-offset: 6px;
     transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -278,7 +273,7 @@ body {
     text-decoration: underline;
     text-decoration-color: rgba(var(--text-color-RGB), 0.3);
     text-decoration-thickness: 1px;
-    text-underline-offset: 8px;
+    text-underline-offset: 6px;
     transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -359,33 +354,37 @@ body {
     margin-bottom: 6rem;
 }
 
+/* САМ КОНТЕЙНЕР (держит текст ровно по сетке) */
 .case-header-sticky {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: rgb(var(--background-color-RGB));
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding-left: calc(50vw - 50%);
-    padding-right: calc(50vw - 50%);
+    /* Убрали фон и сумасшедшие calc-отступы */
     padding-top: 1rem;
     padding-bottom: .3rem;
+}
+
+/* БЕСКОНЕЧНЫЙ БЕЛЫЙ ФОН ШАПКИ (растягивается за пределы экрана) */
+.case-header-sticky::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50vw;
+    width: 200vw;
+    background-color: rgb(var(--background-color-RGB));
+    z-index: -2;
+    /* Прячем под текст и под линию */
 }
 
 /* Текст заголовка */
 .case-title {
     position: relative;
-    /* Теперь координаты линии считаются от самого текста */
     font-weight: 500;
-    line-height: 1.25;
     font-size: var(--main-text-size);
     color: rgb(var(--accent-red-RGB));
     margin: 0;
     line-height: normal;
-
-    @media (max-width: 768px) {
-        line-height: 1.1;
-    }
 }
 
 /* БЕСКОНЕЧНАЯ ТОНКАЯ ЛИНИЯ ЖЕСТКО ПО БАЗОВОЙ ЛИНИИ */
@@ -395,19 +394,18 @@ body {
     height: 0.5px;
     background-color: rgba(var(--accent-red-RGB), 0.2);
     z-index: -1;
+    /* Прячем под текст, но над белым фоном */
 
-    /* Бронебойный метод растяжки на весь экран */
+    /* Возвращаем бронебойный метод растяжки (теперь он безопасен) */
     width: 200vw;
-    /* Делаем линию в два раза шире экрана */
     left: -50vw;
-    /* Сдвигаем её далеко влево */
 
     /* Твоя идеальная привязка к базовой линии текста. 
        Подобрал значение? Оставляй его тут! */
     bottom: 0.53rem;
 
     @media (max-width: 768px) {
-        bottom: 0.45rem;
+        bottom: 0.64rem;
     }
 }
 
