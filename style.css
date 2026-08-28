@@ -45,8 +45,8 @@ body {
 
 .wrapper {
     position: relative;
-    margin-left: 2%;
-    width: 86%;
+    margin-left: 3%;
+    width: 80%;
 
     @media (max-width: 768px) {
         width: 96%;
@@ -101,7 +101,7 @@ body {
 /* ПЕРЕМЕННЫЕ                                    */
 /* ============================================= */
 :root {
-    --text-color-RGB: 46, 43, 43;
+    --text-color-RGB: 11, 11, 11;
     --hover-color-RGB: 47, 255, 0;
     --link-color-RGB: 14, 168, 224;
     --background-color-RGB: 255, 255, 255;
@@ -111,7 +111,7 @@ body {
 
     /* ИСПОЛЬЗУЕМ REM ДЛЯ ЗАЩИТЫ ОТ МАСШТАБИРОВАНИЯ */
     --main-text-size: 1.7rem;
-    --secondary-text-size: 1.2rem;
+    --secondary-text-size: 1.15rem;
     --link-text-size: 1rem;
 }
 
@@ -226,7 +226,7 @@ body {
     font-size: var(--link-text-size);
     color: rgb(var(--text-color-RGB));
     text-decoration: underline;
-    text-decoration-color: rgba(var(--text-color-RGB), 0.3);
+    text-decoration-color: rgba(var(--text-color-RGB), 0.15);
     text-decoration-thickness: 1px;
     text-underline-offset: 6px;
     transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -250,11 +250,6 @@ body {
 /* Добавляем адаптив для телефонов */
 @media (max-width: 768px) {
     .top-nav {
-        flex-direction: column-reverse;
-        /* Разворачиваем порядок колонок */
-        align-items: flex-start;
-        /* Прижимаем всё к левому краю */
-        gap: .7rem;
         /* Добавляем расстояние между языками и ссылками */
         margin-bottom: 1rem;
     }
@@ -271,7 +266,7 @@ body {
     font-size: var(--link-text-size);
     color: rgb(var(--text-color-RGB));
     text-decoration: underline;
-    text-decoration-color: rgba(var(--text-color-RGB), 0.3);
+    text-decoration-color: rgba(var(--text-color-RGB), 0.15);
     text-decoration-thickness: 1px;
     text-underline-offset: 6px;
     transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -352,6 +347,11 @@ body {
 .portfolio-case {
     width: 100%;
     margin-bottom: 6rem;
+}
+
+/* Отменяем нижний отступ у самого последнего кейса в списке */
+.portfolio-case:last-of-type {
+    margin-bottom: 0;
 }
 
 /* САМ КОНТЕЙНЕР (держит текст ровно по сетке) */
@@ -488,7 +488,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
     gap: .5rem;
-    width: 85%;
+    width: 100%;
     align-items: start;
 }
 
@@ -562,9 +562,9 @@ body {
 /* ГАЛЕРЕЯ: MASONRY (Pinterest-стиль)            */
 /* ============================================= */
 .case-gallery-masonry {
-    column-count: 2;
+    column-count: 3;
     column-gap: 0.5rem;
-    width: 85%;
+    width: 100%;
 
     /* Убиваем невидимые межстрочные интервалы, 
        которые могут появляться при inline-block */
@@ -604,5 +604,16 @@ body {
 
     .case-gallery-masonry .case-image {
         margin-bottom: .2rem;
+    }
+}
+
+.accent-text {
+    font-size: 1.3rem;
+    color: #3c04be;
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+        padding-top: .6rem;
     }
 }
