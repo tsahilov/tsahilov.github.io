@@ -2,7 +2,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 html {
+    overflow-x: hidden;
+
     --mobile-viewport-min: 320;
     --mobile-desktop-breakpoint: 768;
     --desktop-viewport-max: 1500;
