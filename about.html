@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Обо мне — Алан Цахилов</title>
+
+    <meta name="description"
+        content="Запускаю информационные и развлекательные продукты для людей: пишу тексты, рисую графику, верстаю и публикую сайты.">
+
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <!-- Скрипт пишущей машинки тоже оставляем, раз шапка такая же -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="v-space S"></div>
+
+    <div class="wrapper">
+
+        <nav class="top-nav">
+            <div class="header-links">
+                <!-- Та самая новая ссылка возврата на главную -->
+                <a href="index.html"> &#8592; Работки</a>
+                <!-- <a href="https://t.me/pepenguin">Телеграм</a> -->
+            </div>
+
+            <div class="lang-switcher">
+                <a href="#" class="active">Русский</a>
+                <a href="#">English</a>
+            </div>
+        </nav>
+
+        <div class="v-space M"></div>
+
+        <header class="main-header text-width">
+            <img src="./images/alan-tsahilov-face.png" alt="Алан Цахилов" class="avatar">
+
+            <p class="header-title">
+                Алан — дизайнер <span class="mobile-line">и&nbsp;<span class="typewriter-text"
+                        id="typewriter">верстальщик</span><span class="typewriter-cursor">|</span></span>
+            </p>
+            <p class="header-desc">
+                Я тут напишу ченить интересное про себя. Например, что мне 24 года, что 6 лет отработал в общепите, что
+                переехал в Питер, свои первые сайты покажу наверное.
+            </p>
+            <p class="header-desc">
+                Но чуть позже, ок?
+            </p>
+        </header>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- ================================================= -->
+
+
+    <!-- Скрипт переключения языков -->
+    <script>
+        const langLinks = document.querySelectorAll('.lang-switcher a');
+
+        langLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                langLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
