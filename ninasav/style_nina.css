@@ -1,0 +1,513 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ============================================= */
+/* ОТСТУПЫ                                       */
+/* ============================================= */
+.v-space.S {
+    height: 1rem;
+
+    @media (max-width: 768px) {
+        height: 0.5rem;
+    }
+}
+
+.v-space.M {
+    height: 2rem;
+
+    @media (max-width: 768px) {
+        height: 1rem;
+    }
+}
+
+.v-space.L {
+    height: 4rem;
+
+    @media (max-width: 768px) {
+        height: 2rem;
+    }
+}
+
+.v-space.XL {
+    height: 8rem;
+
+    @media (max-width: 768px) {
+        height: 4rem;
+    }
+}
+
+:root {
+    --text-color-RGB: 11, 11, 11;
+    --hover-color-RGB: 119, 119, 131;
+    --background-color-RGB: 255, 255, 255;
+    --accent-red-RGB: 0, 93, 255;
+    --highlight-yellow-RGB: 255, 235, 54;
+
+    --main-text-size: 1.4rem;
+    --secondary-text-size: 2rem;
+    --accent-text-size: 6rem;
+    --link-text-size: 1rem;
+
+
+    --grid-padding: 1rem;
+}
+
+
+body {
+    font-family: "itc", sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    color: rgb(var(--text-color-RGB));
+    background-color: rgb(var(--background-color-RGB));
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+}
+
+/* --- ОБНОВЛЕННАЯ ШАПКА --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: var(--main-text-size);
+
+    padding: 1rem var(--grid-padding);
+    z-index: 100;
+
+    display: grid;
+    /* ВМЕСТО 1fr 1fr ПИШЕМ ВОТ ЭТО: */
+    grid-template-columns: calc(50vw - var(--grid-padding)) 1fr;
+
+    align-items: center;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header.scrolled {
+    color: rgb(var(--text-color-RGB));
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Переключатель языков вырываем из сетки и жестко прижимаем вправо, 
+   чтобы он не мешал меню стоять по центру */
+.lang-switch {
+    position: absolute;
+    right: var(--grid-padding);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* --- ОБЩИЕ СТИЛИ ССЫЛОК --- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    /* Плавное затухание при убирании курсора */
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+    color: rgb(var(--hover-color-RGB));
+    /* Моментальное перекрашивание при наведении */
+    transition: color 0s;
+}
+
+/* --- ГЛАВНЫЙ БЛОК И ГАЛЕРЕЯ --- */
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* --- НИЖНИЕ ЭЛЕМЕНТЫ (ИНФО И СЧЕТЧИК) --- */
+
+.hero-item {
+    position: absolute;
+    padding: 1rem 1rem;
+    font-size: var(--accent-text-size);
+    z-index: 10;
+    color: rgba(var(--background-color-RGB), 1);
+    line-height: 1.2;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+
+/* --- БЛОК ОБО МНЕ --- */
+
+/* --- ОБНОВЛЕННЫЙ БЛОК ОБО МНЕ --- */
+.about-section {
+    /* Тоже используем системную переменную для боковых отступов */
+    padding: 0 var(--grid-padding);
+    background-color: rgb(var(--background-color-RGB));
+}
+
+.about-text {
+    width: 80vw;
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-size: var(--secondary-text-size);
+
+    /* Математика стала пуленепробиваемой */
+    text-indent: calc(50vw - var(--grid-padding));
+}
+
+/* --- ССЫЛКА ПОД ТЕКСТОМ (ВЫРАВНИВАНИЕ СЛЕВА) --- */
+
+.about-footer {
+    margin-top: 4rem;
+    /* Отступ от текстового абзаца */
+    /* Убрали display: grid, теперь это обычный блок */
+}
+
+.composition-link {
+    font-size: var(--secondary-text-size);
+    color: rgb(var(--text-color-RGB));
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    border-bottom: 1px solid rgba(var(--text-color-RGB), 0.3);
+    padding-bottom: 0.2rem;
+    width: max-content;
+
+    /* Применяем твою кривую и для цвета текста, и для цвета подчеркивания */
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.composition-link:hover {
+    color: rgb(var(--hover-color-RGB));
+    border-color: rgb(var(--hover-color-RGB));
+
+    /* Моментальное перекрашивание для обоих свойств */
+    transition: color 0s, border-color 0s;
+}
+
+/* --- СЕКЦИЯ ПРОЕКТОВ --- */
+
+.projects-section {
+    /* Боковые отступы берем из нашей переменной */
+    padding: 0 var(--grid-padding);
+}
+
+.section-title {
+    margin: 0;
+
+    /* Настраиваем типографику (размер можешь подогнать под свой макет) */
+    font-size: var(--accent-text-size);
+    font-weight: 400;
+    /* Сбрасываем жирность, которая у заголовков h2 идет по умолчанию */
+    color: rgb(var(--text-color-RGB));
+    line-height: 1.2;
+
+    /* ТА САМАЯ ИДЕАЛЬНАЯ ЛИНИЯ */
+    margin-left: calc(50vw - var(--grid-padding));
+}
+
+
+
+/* --- СЕКЦИЯ ПРОЕКТОВ --- */
+.projects-section {
+    position: relative;
+    /* Возвращаем отступы по краям экрана */
+    padding: 0 var(--grid-padding);
+}
+
+.projects-stagger {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /* УВЕЛИЧЕННЫЙ ОТСТУП СВЕРХУ */
+    /* Сдвигаем все карточки вниз, чтобы дать место гигантскому заголовку. 
+       Если заголовок будет наезжать на фото — просто увеличь это значение (например, до 20rem) */
+    padding-top: 4rem;
+}
+
+/* --- ЗАГОЛОВОК --- */
+.section-title {
+    position: absolute;
+    top: 0;
+
+    /* ЖЕЛЕЗНАЯ ЛИНИЯ: Прибиваем левый край ровно к середине экрана */
+    left: 50vw;
+    width: calc(50vw - var(--grid-padding));
+
+    margin: 0;
+    font-size: var(--secondary-text-size);
+    line-height: 1;
+    /* Делаем межстрочный интервал поплотнее для такого размера */
+    font-weight: 400;
+    z-index: 10;
+
+    /* Если слово слишком длинное, оно будет переноситься, а не лезть влево */
+    word-wrap: break-word;
+}
+
+/* --- КАРТОЧКА ПРОЕКТА --- */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: margin-top 0.3s ease;
+}
+
+/* ЛЕВЫЕ КАРТОЧКИ */
+.project-card.left {
+    align-self: flex-start;
+    /* Ширина: 50% экрана минус двойной отступ (чтобы оставить 1rem по центру) */
+    width: calc(50vw - (var(--grid-padding) * 2));
+}
+
+/* ПРАВЫЕ КАРТОЧКИ */
+.project-card.right {
+    align-self: flex-start;
+    /* ЖЕЛЕЗНАЯ ЛИНИЯ: Сдвигаем левый край ровно на 50vw от начала экрана */
+    margin-left: calc(50vw - var(--grid-padding));
+
+    /* Ширина: оставшиеся 50% экрана минус отступ справа */
+    width: calc(50vw - var(--grid-padding));
+}
+
+.project-title {
+    margin: 0;
+    font-size: var(--secondary-text-size);
+    font-weight: 400;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2.5rem;
+}
+
+/* ============================================= */
+/* МОБИЛЬНАЯ АДАПТАЦИЯ (MAX-WIDTH: 768PX)        */
+/* ============================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Уменьшаем шрифты для мобилок, чтобы гигантские заголовки не ломали экран */
+    :root {
+        --accent-text-size: 1.7rem;
+        --secondary-text-size: 1.1rem;
+        --main-text-size: 1.1rem;
+        --h2-text-size: 1.3rem;
+
+        --grid-padding: .5rem;
+    }
+
+    /* 2. МЕНЯЕМ ПОРЯДОК БЛОКОВ */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Прячем десктопные спейсеры, на мобилках будем отступать маржинами */
+    .v-space {
+        display: none;
+    }
+
+    .about-section {
+        order: 1;
+        margin-top: 9rem;
+        /* Отступ под шапку */
+        padding: 0 var(--grid-padding);
+    }
+
+    .hero {
+        order: 2;
+        margin-top: 4rem;
+    }
+
+    .projects-section {
+        order: 3;
+        margin-top: 4rem;
+    }
+
+    /* 3. ШАПКА (HEADER) */
+    .header {
+        display: block;
+        /* Выключаем Grid */
+        /* background-color: rgb(var(--background-color-RGB)); */
+        /* Непрозрачный белый фон */
+        color: rgb(var(--text-color-RGB));
+        /* Текст всегда темный */
+        height: 5rem;
+        padding: 1rem 0;
+        /* Боковые отступы зададим элементам внутри */
+    }
+
+    .main-nav {
+        position: absolute;
+        top: .5rem;
+        left: var(--grid-padding);
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    /* Добавляем запятые к ссылкам меню (как на твоем макете) */
+    .main-nav a:not(:last-child)::after {
+        content: ",";
+    }
+
+    .logo {
+        position: absolute;
+        top: .5rem;
+        /* Та самая железная линия! Nina Sav встает ровно над началом текста */
+        left: 50vw;
+    }
+
+    .lang-switch {
+        top: .5rem;
+        transform: none;
+        gap: .3rem;
+    }
+
+    /* 4. БЛОК ОБО МНЕ */
+    .about-text {
+        width: 100%;
+        text-align: justify;
+        /* То самое выравнивание по ширине */
+
+        /* Включаем автопереносы, чтобы избавиться от дыр между словами */
+        -webkit-hyphens: auto;
+        hyphens: auto;
+
+        /* text-indent из десктопа всё еще работает и отбивает первую строку! */
+
+    }
+
+    /* Настройка отступа для ссылки под текстом "Обо мне" */
+    .about-footer {
+        margin-top: 1rem;
+        /* Уменьшаем отступ. Можешь сделать 1rem, если нужно прижать сильнее */
+    }
+
+    /* 5. ГЛАВНЫЙ ЭКРАН (HERO) */
+    .hero {
+        height: auto;
+        display: block;
+        /* Убираем flex, так как текст снова висит поверх картинки */
+        position: relative;
+    }
+
+    .gallery-wrapper {
+        position: relative;
+        height: 60vh;
+        width: 100%;
+    }
+
+    .hero-item.bottom-left {
+        position: absolute;
+        /* Возвращаем поверх картинки */
+
+        /* ПРИЖИМАЕМ К ВЕРХНЕМУ ЛЕВОМУ КРАЮ */
+        top: 0;
+        bottom: auto;
+        /* Сбрасываем десктопное прилипание к низу */
+        left: 0;
+
+        padding: .5rem var(--grid-padding);
+        color: rgb(var(--text-color-RGB));
+        font-size: var(--h2-text-size);
+        /* Возвращаем светлый цвет текста */
+        z-index: 10;
+    }
+
+    /* 6. ПРОЕКТЫ (УБИВАЕМ СЕТКУ И СКРИПТ) */
+    .section-title {
+        position: relative;
+        left: 0;
+        /* Просто обнуляем десктопный сдвиг */
+        width: 100%;
+        font-size: var(--accent-text-size);
+        margin-bottom: 1.4rem;
+    }
+
+
+
+    .projects-stagger {
+        padding-top: 0;
+    }
+
+    .project-card {
+        width: 100% !important;
+        /* Карточка на всю ширину */
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        /* Глушим JS-скрипт лесенки */
+        margin-bottom: 1.2rem;
+        gap: .4rem;
+    }
+
+    .project-card.left,
+    .project-card.right {
+        /* Сбрасываем десктопные боковые отступы (оставляем нули слева и справа) */
+        padding: 0;
+
+        /* Добавляем тонкую линию сверху */
+        border-top: 1px solid #d6d6d6;
+
+        /* Отступ вниз от линии до заголовка, чтобы текст не прилипал */
+        padding-top: .4rem;
+    }
+
+    .project-title {
+        font-size: var(--h2-text-size);
+        line-height: 1.2;
+    }
+
+    .project-img {
+        border-radius: 1.4rem;
+    }
+
+}
+
+/* По умолчанию на десктопе переносы скрыты */
+.mob-br {
+    display: none;
+}
+
+/* Включаем переносы только на мобильных экранах */
+@media (max-width: 768px) {
+    .mob-br {
+        display: inline;
+    }
+}

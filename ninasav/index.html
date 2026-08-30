@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nina Sav</title>
+    <link rel="stylesheet" href="style_nina.css">
+    <link rel="stylesheet" href="fonts_style_nina.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            Nina Sav
+        </div>
+
+        <nav class="main-nav">
+            <a href="#" class="active">Objects</a>
+            <a href="#">About me</a>
+            <a href="#">Contacts</a>
+        </nav>
+
+        <div class="lang-switch">
+            <a href="#">Ru</a>
+            <a href="#" class="active">En</a>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="gallery-wrapper">
+            <img src="./images_nina/vld.webp" alt="Vladikavkaz Residence" class="gallery-image active">
+        </div>
+
+        <div class="hero-item bottom-left">
+            Vladikavkaz <br> Residence — 1,000 m²
+        </div>
+
+
+    </main>
+    <div class="v-space M"></div>
+    <section class="about-section">
+        <p class="about-text">
+            Nina is an architect and designer holding a Master’s degree from Istituto Marangoni in Milan. She has
+            successfully delivered over 50 projects across Russia, the CIS, and Europe. Her expertise spans from
+            creating cozy 45 m² intimate spaces to developing skyscrapers.
+        </p>
+        <div class="about-footer">
+            <a href="#" class="composition-link">Composition of the design project &rarr;</a>
+        </div>
+    </section>
+    <div class="v-space XL"></div>
+
+    <section class="projects-section">
+        <!-- Заголовок позиционируем отдельно, чтобы он не ломал математику отступов -->
+        <h2 class="section-title">FEATURED PROJECTS (6)</h2>
+
+        <!-- Единый список всех проектов -->
+        <div class="projects-stagger">
+
+            <!-- 1 -->
+            <div class="project-card left">
+                <h3 class="project-title">Vladikavkaz <br class="mob-br"> Residence — 1,000 m²</h3>
+                <img src="./images_nina/gallery-1.webp" alt="Vladikavkaz Residence" class="project-img">
+            </div>
+
+            <!-- 2 -->
+            <div class="project-card right">
+                <h3 class="project-title">Digora <br class="mob-br"> Residence — 800 m²</h3>
+                <img src="./images_nina/gallery-2.webp" alt="Digora" class="project-img">
+            </div>
+
+            <!-- 3 -->
+            <div class="project-card left">
+                <h3 class="project-title">«Brugge» <br class="mob-br"> Restaurant</h3>
+                <img src="./images_nina/gallery-3.webp" alt="Brugge Restaurant" class="project-img">
+            </div>
+
+            <!-- 4 -->
+            <div class="project-card right">
+                <h3 class="project-title">Mountain Saniba <br class="mob-br"> house — 250 m²</h3>
+                <img src="./images_nina/gallery-4.webp" alt="Saniba" class="project-img">
+            </div>
+
+            <!-- 5 -->
+            <div class="project-card left">
+                <h3 class="project-title">Digora <br class="mob-br"> Residence — 800 m²</h3>
+                <img src="./images_nina/gallery-5.webp" alt="Digora" class="project-img">
+            </div>
+
+            <!-- 6 -->
+            <div class="project-card right">
+                <h3 class="project-title">Mountain Saniba <br class="mob-br"> house — 250 m²</h3>
+                <!-- Тут можно будет вставить тег <video> вместо картинки -->
+                <img src="./images_nina/gallery-6.webp" alt="Saniba Video" class="project-img">
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="v-space XL"></div>
+    <div class="v-space XL"></div>
+    <div class="v-space XL"></div>
+
+    <script>
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            // window.innerHeight — это высота первого экрана (нашей картинки)
+            // Отнимаем 80 пикселей (примерная высота шапки), чтобы цвет менялся 
+            // как раз когда шапка начинает наезжать на белый фон
+            if (window.scrollY >= window.innerHeight - 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        function applyStagger() {
+            const cards = document.querySelectorAll('.project-card');
+            if (cards.length === 0) return;
+
+            // Сначала сбрасываем отступы (это важно, если пользователь будет менять размер окна)
+            cards.forEach(card => card.style.marginTop = '0px');
+
+            // Начинаем со второй карточки (индекс 1)
+            for (let i = 1; i < cards.length; i++) {
+                const prevCard = cards[i - 1];
+                const currentCard = cards[i];
+
+                // Узнаем реальную высоту предыдущей карточки со всем её содержимым
+                const prevHeight = prevCard.offsetHeight;
+
+                // Высчитываем 20% (чтобы блок начался ровно на отметке 80%)
+                const overlap = prevHeight * 0.2;
+
+                // Подтягиваем текущую карточку вверх
+                currentCard.style.marginTop = `-${overlap}px`;
+            }
+        }
+
+        // Запускаем пересчет только когда картинки полностью загрузились и заняли свою высоту
+        window.addEventListener('load', applyStagger);
+
+        // И пересчитываем, если окно изменило размер (перевернули планшет, например)
+        window.addEventListener('resize', applyStagger);
+    </script>
+
+</body>
+
+</html>

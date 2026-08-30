@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Конвертер шрифтов в WOFF2 — Бесплатная онлайн конвертация — MicroApps</title>
+<meta name="description" content="Конвертируйте TTF, OTF, WOFF шрифты в WOFF2 формат онлайн. Быстрая конвертация с оптимальным сжатием для веб-сайтов. Без регистрации.">
+<meta name="csrf-token" content="887202091ac18f1cf2831bc65507d64b65b50501cda0dcdd677ee147de8a45c6">
+<meta property="og:title" content="Конвертер шрифтов в WOFF2 — Бесплатная онлайн конвертация — MicroApps">
+<meta property="og:description" content="Конвертируйте TTF, OTF, WOFF шрифты в WOFF2 формат онлайн. Быстрая конвертация с оптимальным сжатием для веб-сайтов. Без регистрации.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://microapps.by/font-to-woff2">
+<meta property="og:image" content="https://microapps.by/assets/img/logo.png">
+<meta property="og:image:width" content="250">
+<meta property="og:image:height" content="250">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="MicroApps">
+<meta name="yandex-verification" content="79f297cd4e3213bf">
+<meta name="google-site-verification" content="XfaWz4gWN2r_tVVHZV5Hrzh02z3E_WyvVSSy1z-jnh0">
+  <link rel="alternate" hreflang="ru" href="https://microapps.by/font-to-woff2">
+  <link rel="alternate" hreflang="en" href="https://microapps.by/en/font-to-woff2">
+  <link rel="alternate" hreflang="x-default" href="https://microapps.by/font-to-woff2">
+
+<link rel="canonical" href="https://microapps.by/font-to-woff2">
+  <meta name="robots" content="index, follow">
+
+<meta property="og:site_name" content="MicroApps">
+
+<script>
+  (function() {
+    try {
+      document.documentElement.classList.add('theme-preload');
+    } catch (e) {}
+  })();
+</script>
+
+  <link rel="stylesheet" href="https://microapps.by/assets/css/tailwind.build.css?v=1782988513">
+  <link rel="stylesheet" href="https://microapps.by/assets/css/main.css?v=1784759138">
+
+  <link rel="manifest" href="https://microapps.by/assets/site.webmanifest">
+<link rel="icon" href="https://microapps.by/favicon.ico " type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="https://microapps.by/assets/img/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://microapps.by/assets/img/icon-192.png">
+<link rel="icon" type="image/png" sizes="180x180" href="https://microapps.by/assets/img/apple-touch-icon-180.png">
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://microapps.by/#website","name":"MicroApps","url":"https://microapps.by"},{"@type":"WebPage","@id":"https://microapps.by/font-to-woff2#webpage","url":"https://microapps.by/font-to-woff2","inLanguage":"ru","isPartOf":{"@type":"WebSite","@id":"https://microapps.by/#website"},"name":"Конвертер шрифтов в WOFF2 — Бесплатная онлайн конвертация","keywords":"конвертер шрифтов, ttf в woff2, otf в woff2, woff в woff2, конвертация шрифтов онлайн, оптимизация шрифтов","dateModified":"2026-07-07T00:00:00+03:00"},{"@type":"Article","@id":"https://microapps.by/font-to-woff2#article","headline":"Что такое WOFF2 и зачем конвертировать шрифты?","inLanguage":"ru","mainEntityOfPage":{"@type":"WebPage","@id":"https://microapps.by/font-to-woff2#webpage"},"description":"Конвертируйте TTF, OTF, WOFF шрифты в WOFF2 формат онлайн. Быстрая конвертация с оптимальным сжатием для веб-сайтов. Без регистрации.","image":{"@type":"ImageObject","url":"https://microapps.by/favicon.png"},"articleSection":"Utilities","keywords":"конвертер шрифтов, ttf в woff2, otf в woff2, woff в woff2, конвертация шрифтов онлайн, оптимизация шрифтов","speakable":{"@type":"SpeakableSpecification","xpath":["/html/head/title","/html/head/meta[@name='description']/@content"]},"dateModified":"2026-07-07T00:00:00+03:00"},{"@type":"SoftwareApplication","@id":"https://microapps.by/font-to-woff2#software","name":"Конвертер шрифтов в WOFF2 — Бесплатная онлайн конвертация","description":"Конвертируйте TTF, OTF, WOFF шрифты в WOFF2 формат онлайн. Быстрая конвертация с оптимальным сжатием для веб-сайтов. Без регистрации.","url":"https://microapps.by/font-to-woff2","applicationCategory":"Utility","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","@id":"https://microapps.by/font-to-woff2#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"MicroApps","item":"https://microapps.by"},{"@type":"ListItem","position":2,"name":"Что такое WOFF2 и зачем конвертировать шрифты?","item":"https://microapps.by/font-to-woff2"}]}]}</script><link rel="preload" href="https://microapps.by/assets/fonts/Jost-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<style>
+  :root {
+    --bg: #383838;
+    --card: #212121;
+    --text: #eaeaea;
+    --muted: #1C1C20;
+    --accent: #156dc5;
+    --hover-bg: rgba(19, 124, 230, 0.1019607843);
+    --border: #ffffff30;
+    --radius: 8px;
+    --transition: 0.3s ease;
+    --font-stack: 'Jost', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --muted-hover: rgba(48, 48, 52, 0.8509803922);
+    --nav-bg: #2a2a2a;
+    --dark: #444444b4;
+    --mobile: 768px;
+    --button-bg: #ffffff33;
+    --button-hover: #ffffff59;
+  }
+
+  /* Disable transitions while theme is being applied to avoid flash */
+  html.theme-preload *,
+  html.theme-preload *::before,
+  html.theme-preload *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Light theme variables (applied when data-theme="light") */
+  [data-theme="light"] {
+    --bg: #e1e1e1;
+    --card: #e9e6e6;
+    --text: #1a1a1a;
+    --muted: #cacaca;
+    --accent: #007bff;
+    --hover-bg: #6d6d6dd9;
+    --border: #ccc;
+    --nav-bg: #d0d0d0;
+    --button-bg: #00000033;
+    --button-hover: #00000059;
+    --dark: #4444442b;
+    --border: #00000030;
+
+
+  }
+
+  body {
+    font-family: var(--font-stack);
+    color: var(--text);
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga", "kern";
+    text-rendering: optimizeSpeed;
+  }
+
+  @font-face {
+    font-family: 'Jost';
+    src: url('https://microapps.by/assets/fonts/Jost-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    transition: background 1s ease
+  }
+
+  .container {
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto
+  }
+
+
+  .main-content {
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 100%;
+    min-height: auto;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-color);
+    flex-grow: 1;
+  }
+
+  .main-content .container {
+    padding-inline: 10px;
+  }
+
+  .layout {
+    display: flex;
+    width: 100%;
+    min-height: 100dvh
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0
+  }
+
+  .text-lg {
+    font-size: 1.125rem;
+  }
+
+  .font-semibold {
+    font-weight: 600;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: auto;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .top-0 {
+    top: 0
+  }
+
+  .left-0 {
+    left: 0
+  }
+
+  .w-full {
+    width: 100%
+  }
+
+  .h-auto {
+    height: auto
+  }
+
+  .gap-1 {
+    gap: 0.25rem
+  }
+
+  .gap-2 {
+    gap: 0.5rem
+  }
+
+  .gap-3 {
+    gap: 0.75rem
+  }
+
+  .gap-4 {
+    gap: 1rem
+  }
+
+  .aspect-square {
+    aspect-ratio: 1/1
+  }
+
+  .gap-6 {
+    gap: 1.5rem
+  }
+
+  .mb-1 {
+    margin-bottom: 0.25rem
+  }
+
+  .mb-2 {
+    margin-bottom: 0.5rem
+  }
+
+  .mb-3 {
+    margin-bottom: 0.75rem
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem
+  }
+
+  .mb-6 {
+    margin-bottom: 1.5rem
+  }
+
+  .text-lg {
+    font-size: 1.125rem
+  }
+
+  .text-xl {
+    font-size: 1.25rem
+  }
+
+  .text-2xl {
+    font-size: 1.5rem
+  }
+
+  .text-3xl {
+    font-size: 1.875rem
+  }
+
+  .text-center {
+    text-align: center
+  }
+
+  .mobile-header {
+    display: none
+  }
+
+  .overflow-hidden {
+    overflow: hidden
+  }
+
+  .overflow-x-hidden {
+    overflow-x: hidden
+  }
+
+  .overflow-auto {
+    overflow: auto
+  }
+
+  .grid {
+    display: grid
+  }
+
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr)
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms ease;
+    z-index: 90
+  }
+
+  header {
+    min-height: 64px
+  }
+
+  .mobile-header {
+    min-height: 56px
+  }
+
+
+  .sidebar-wrapper {
+    flex-shrink: 0
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100%;
+    background: var(--nav-bg);
+    padding: 16px;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, .22);
+    transition: left .3s ease;
+    overflow-y: auto;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+  }
+
+  @media (max-width:768px) {
+    .mobile-header {
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px
+    }
+
+    .sidebar-wrapper {
+      display: none
+    }
+
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(1, minmax(0, 1fr))
+    }
+
+    .hidden-mobile {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      border: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      clip-path: inset(100%) !important;
+      white-space: nowrap !important
+    }
+
+    .sidebar-wrapper {
+      width: 0
+    }
+  }
+
+  @media (min-width:768px) {
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+  }
+
+  @media (min-width:1024px) {
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+  }
+
+  header {
+    border-bottom: solid 2px var(--border)
+  }
+
+  footer {
+    border-top: solid 2px var(--border)
+  }
+
+  #mobileMenuSearch {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    font-size: 14px
+  }
+
+  .menu-section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text);
+    margin: 2px 4px 8px
+  }
+
+  .mobile-header.menu-open .burger span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg)
+  }
+
+  .mobile-header.menu-open .burger span:nth-child(2) {
+    opacity: 0
+  }
+
+  .mobile-header.menu-open .burger span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg)
+  }
+
+  .mobile-header .burger {
+    width: 42px;
+    height: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    opacity: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none
+  }
+
+  .mobile-header .burger span {
+    display: block;
+    width: 100% !important;
+    height: 3px;
+    background: currentColor;
+    border-radius: 3px;
+    transition: transform .35s ease, opacity .35s ease, top .35s ease
+  }
+
+  @media (max-width:786px) {
+    .nav-left {
+      position: relative;
+      transform: none;
+      width: 100%;
+      flex: 0 0 auto
+    }
+
+    .nav-left.open {
+      transform: none
+    }
+  }
+
+  .layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden
+  }
+
+  .liquid-glass .lg-stage {
+    position: relative;
+    border-radius: var(--radius, 16px);
+    min-height: 360px;
+    overflow: hidden;
+  }
+</style>
+
+</head>
+
+<body>
+  <noscript>
+    <div style="position: absolute; left: -9999px; width:1px; height:1px; overflow:hidden;">
+      <img src="https://mc.yandex.ru/watch/105435626" alt="">
+    </div>
+  </noscript>
+  <div class="layout">
+    <div class="sidebar-wrapper">
+    <div class="collapse-bar">
+        <button class="sidebar-show" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav_left">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g transform="rotate(180 18 18)">
+                    <path d="M6.00001 27C5.57501 27 5.21901 26.856 4.93201 26.568C4.64501 26.28 4.50101 25.924 4.50001 25.5C4.49901 25.076 4.64301 24.72 4.93201 24.432C5.22101 24.144 5.57701 24 6.00001 24H22.5C22.925 24 23.2815 24.144 23.5695 24.432C23.8575 24.72 24.001 25.076 24 25.5C23.999 25.924 23.855 26.2805 23.568 26.5695C23.281 26.8585 22.925 27.002 22.5 27H6.00001ZM28.35 24.45L22.95 19.05C22.65 18.75 22.5 18.4 22.5 18C22.5 17.6 22.65 17.25 22.95 16.95L28.35 11.55C28.625 11.275 28.975 11.1375 29.4 11.1375C29.825 11.1375 30.175 11.275 30.45 11.55C30.725 11.825 30.8625 12.175 30.8625 12.6C30.8625 13.025 30.725 13.375 30.45 13.65L26.1 18L30.45 22.35C30.725 22.625 30.8625 22.975 30.8625 23.4C30.8625 23.825 30.725 24.175 30.45 24.45C30.175 24.725 29.825 24.8625 29.4 24.8625C28.975 24.8625 28.625 24.725 28.35 24.45ZM6.00001 19.5C5.57501 19.5 5.21901 19.356 4.93201 19.068C4.64501 18.78 4.50101 18.424 4.50001 18C4.49901 17.576 4.64301 17.22 4.93201 16.932C5.22101 16.644 5.57701 16.5 6.00001 16.5H18C18.425 16.5 18.7815 16.644 19.0695 16.932C19.3575 17.22 19.501 17.576 19.5 18C19.499 18.424 19.355 18.7805 19.068 19.0695C18.781 19.3585 18.425 19.502 18 19.5H6.00001ZM6.00001 12C5.57501 12 5.21901 11.856 4.93201 11.568C4.64501 11.28 4.50101 10.924 4.50001 10.5C4.49901 10.076 4.64301 9.72 4.93201 9.432C5.22101 9.144 5.57701 9 6.00001 9H22.5C22.925 9 23.2815 9.144 23.5695 9.432C23.8575 9.72 24.001 10.076 24 10.5C23.999 10.924 23.855 11.2805 23.568 11.5695C23.281 11.8585 22.925 12.002 22.5 12H6.00001Z" fill="#FDFDFD" />
+                </g>
+            </svg>
+        </button>
+    </div>
+    <aside class="sidebar show" id="nav_left" aria-label="Боковое меню">
+        <div class="sidebar-header flex items-center justify-between w-full">
+            <a class="sidebar-logo" href="https://microapps.by" aria-label="На главную MicroApps">
+                <img class="aspect-square" width="40" height="40" src="https://microapps.by/assets/img/logo-40.webp" alt="MicroApps Logo" >
+            </a>
+            <button class="sidebar-hide" aria-label="Закрыть меню" aria-expanded="true" aria-controls="nav_left">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M6.00001 27C5.57501 27 5.21901 26.856 4.93201 26.568C4.64501 26.28 4.50101 25.924 4.50001 25.5C4.49901 25.076 4.64301 24.72 4.93201 24.432C5.22101 24.144 5.57701 24 6.00001 24H22.5C22.925 24 23.2815 24.144 23.5695 24.432C23.8575 24.72 24.001 25.076 24 25.5C23.999 25.924 23.855 26.2805 23.568 26.5695C23.281 26.8585 22.925 27.002 22.5 27H6.00001ZM28.35 24.45L22.95 19.05C22.65 18.75 22.5 18.4 22.5 18C22.5 17.6 22.65 17.25 22.95 16.95L28.35 11.55C28.625 11.275 28.975 11.1375 29.4 11.1375C29.825 11.1375 30.175 11.275 30.45 11.55C30.725 11.825 30.8625 12.175 30.8625 12.6C30.8625 13.025 30.725 13.375 30.45 13.65L26.1 18L30.45 22.35C30.725 22.625 30.8625 22.975 30.8625 23.4C30.8625 23.825 30.725 24.175 30.45 24.45C30.175 24.725 29.825 24.8625 29.4 24.8625C28.975 24.8625 28.625 24.725 28.35 24.45ZM6.00001 19.5C5.57501 19.5 5.21901 19.356 4.93201 19.068C4.64501 18.78 4.50101 18.424 4.50001 18C4.49901 17.576 4.64301 17.22 4.93201 16.932C5.22101 16.644 5.57701 16.5 6.00001 16.5H18C18.425 16.5 18.7815 16.644 19.0695 16.932C19.3575 17.22 19.501 17.576 19.5 18C19.499 18.424 19.355 18.7805 19.068 19.0695C18.781 19.3585 18.425 19.502 18 19.5H6.00001ZM6.00001 12C5.57501 12 5.21901 11.856 4.93201 11.568C4.64501 11.28 4.50101 10.924 4.50001 10.5C4.49901 10.076 4.64301 9.72 4.93201 9.432C5.22101 9.144 5.57701 9 6.00001 9H22.5C22.925 9 23.2815 9.144 23.5695 9.432C23.8575 9.72 24.001 10.076 24 10.5C23.999 10.924 23.855 11.2805 23.568 11.5695C23.281 11.8585 22.925 12.002 22.5 12H6.00001Z" fill="#FDFDFD" />
+                </svg>
+
+            </button>
+        </div>
+        <div class="sidebar-section" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <h3 class="sidebar-subtitle">Страницы</h3>
+            <ul class="sidebar-list">
+                                                        <li><a href="https://microapps.by" itemprop="url"><span itemprop="name">Главная</span></a></li>
+                                                        <li><a href="https://microapps.by/about" itemprop="url"><span itemprop="name">О проекте</span></a></li>
+                                                        <li><a href="https://microapps.by/contact" itemprop="url"><span itemprop="name">Контакты</span></a></li>
+                                                        <li><a href="https://blog.microapps.by/" itemprop="url"><span itemprop="name">Блог</span></a></li>
+                            </ul>
+        </div>
+        <div class="search-wrapper" role="search">
+            <label for="nav_search" class="sr-only">Поиск инструментов</label>
+            <input id="nav_search" type="search" placeholder="Поиск по сервисам..." class="sidebar-search" aria-label="Поиск инструментов" autocomplete="off" >
+        </div>
+
+        <nav class="sidebar-nav" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Навигация по сервисам">
+            <meta itemprop="name" content="Навигация по сервисам" >
+            <!-- Избранное (будет добавлено JS) -->
+            <div id="favorites-section" class="flex-col" style="display:none; min-height: 72px;" itemscope itemtype="https://schema.org/ItemList">
+                <h3 class="sidebar-subtitle text-lg font-semibold">Избранное</h3>
+                <meta itemprop="name" content="Избранные инструменты" >
+                <div class="sidebar-category sidebar-favorites">
+                    <ul class="sidebar-list"></ul>
+                </div>
+            </div>
+
+                        <div id="related-tools-section" class="active-category-section flex-col" style="display:flex; min-height: 260px;">
+                <span id="related-tools-title" class="h3 sidebar-subtitle active-category-title font-semibold text-lg mb-2" aria-live="polite">Похожие инструменты</span>
+                <div class="sidebar-category sidebar-active-category">
+                    <ul class="sidebar-list">
+                                                    <li>
+                                <a href="https://microapps.by/webp-converter"  >
+                                    <span>Конвертер в WebP</span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://microapps.by/png-svg"  >
+                                    <span>PNG в SVG</span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://microapps.by/favicon-generator"  >
+                                    <span>Генератор фавикона</span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://microapps.by/image-compressor"  >
+                                    <span>Сжатие изображений</span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://microapps.by/css-compressor"  >
+                                    <span>Минификатор CSS</span>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+            
+            <!-- Категории -->
+            <h3 class="sidebar-subtitle">Категории</h3>
+            <div>
+                <ul class="sidebar-list sidebar-categories">
+                                            <li data-category="ai">
+                            <a href="https://microapps.by/category/ai">
+                                <span>AI-инструменты</span>
+                            </a>
+                        </li>
+                                            <li data-category="graphics">
+                            <a href="https://microapps.by/category/graphics">
+                                <span>Графика</span>
+                            </a>
+                        </li>
+                                            <li data-category="development">
+                            <a href="https://microapps.by/category/development">
+                                <span>Разработка</span>
+                            </a>
+                        </li>
+                                            <li data-category="utilities">
+                            <a href="https://microapps.by/category/utilities">
+                                <span>Утилиты</span>
+                            </a>
+                        </li>
+                                            <li data-category="seo">
+                            <a href="https://microapps.by/category/seo">
+                                <span>Seo</span>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </nav>
+        <script>
+            window.MICROAPPS_LANG = "ru";
+        </script>
+        <div class="sidebar-footer pt-4 flex items-center justify-between">
+                                            <a class="login text-lg" rel='nofollow' href="https://microapps.by/google-login?r=%2Ffont-to-woff2%3Fysclid%3Dmteylyfxwm377166306%2Fapi.php">Войти</a>
+                    </div>
+    </aside>
+
+</div>    <div class="flex flex-col w-full">
+      <header class="desktop-header hidden-mobile">
+        <span class="text-lg ">MicroApps</span>
+
+        <h1 class='text-center text-2xl md:text-3xl'>Конвертер шрифтов в WOFF2</h1>
+          <div class="theme-toggle">
+            <input type="checkbox" id="themeSwitch" aria-label="Переключить тему">
+            <label for="themeSwitch" class="theme-toggle-label">Toggle</label>
+          </div>          
+      </header>
+      <!-- Mobile header -->
+      <header class="mobile-header w-full">
+        <button id="mobileMenuButton" class="burger" aria-label="Открыть меню" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <p>Конвертер шрифтов в WOFF2</p>
+      </header>
+
+      <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" aria-label="Основная навигация" itemscope itemtype="https://schema.org/SiteNavigationElement" tabindex="-1">
+                <button type="button" id="mobileMenuClose" class="menu-close" aria-label="Закрыть меню">×</button>
+        <input type="search" id="mobileMenuSearch" placeholder="Поиск..." aria-label="Поиск по меню" >
+        
+                  <div class="menu-section" data-section="pages">
+            <h2 class="menu-section-title">Страницы</h2>
+            <ul class="sidebar-list">
+                                              <li><a href="https://microapps.by" itemprop="url"><span itemprop="name">Главная</span></a></li>
+                                              <li><a href="https://microapps.by/about" itemprop="url"><span itemprop="name">О проекте</span></a></li>
+                                              <li><a href="https://microapps.by/contact" itemprop="url"><span itemprop="name">Контакты</span></a></li>
+                                              <li><a href="https://microapps.by/https://blog.microapps.by/" itemprop="url"><span itemprop="name">Блог</span></a></li>
+                          </ul>
+          </div>
+                
+                          <div class="menu-section" data-section="related">
+            <h2 class="menu-section-title">Похожие инструменты</h2>
+            <ul class="sidebar-list">
+                              <li><a href="https://microapps.by/css-compressor"><span>Минификатор CSS</span></a></li>
+                              <li><a href="https://microapps.by/image-compressor"><span>Сжатие изображений</span></a></li>
+                              <li><a href="https://microapps.by/webp-converter"><span>Конвертер в WebP</span></a></li>
+                              <li><a href="https://microapps.by/png-svg"><span>PNG в SVG</span></a></li>
+                              <li><a href="https://microapps.by/favicon-generator"><span>Генератор фавикона</span></a></li>
+                          </ul>
+          </div>
+        
+                  <div class="menu-section" data-section="categories">
+            <h2 class="menu-section-title">Категории</h2>
+            <div>
+              <ul class="sidebar-list sidebar-categories">
+                                  <li>
+                    <a href="https://microapps.by/category/ai" data-category="ai">
+                      <span>ИИ инструменты</span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://microapps.by/category/graphics" data-category="graphics">
+                      <span>Графика и изображения</span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://microapps.by/category/development" data-category="development">
+                      <span>Разработка</span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://microapps.by/category/utilities" data-category="utilities">
+                      <span>Утилиты</span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://microapps.by/category/seo" data-category="seo">
+                      <span>SEO и маркетинг</span>
+                    </a>
+                  </li>
+                              </ul>
+            </div>
+          </div>
+              </nav>
+      <div id="nav_overlay" class="nav-overlay" aria-hidden="true" tabindex="-1"></div>
+
+      <script>
+        // мобильное меню
+       !function(){var e=document.getElementById("mobileMenuButton"),t=document.getElementById("mobileMenuClose"),n=document.getElementById("mobileMenu"),a=document.getElementById("nav_overlay");function i(t){if(t)n.setAttribute("aria-hidden","true"),e.setAttribute("aria-expanded","false"),n.querySelectorAll("a,button,input,select,textarea").forEach((function(e){e.dataset._tabindex=e.hasAttribute("tabindex")?e.getAttribute("tabindex"):"",e.setAttribute("tabindex","-1")})),a.setAttribute("aria-hidden","true");else{n.setAttribute("aria-hidden","false"),e.setAttribute("aria-expanded","true"),n.querySelectorAll("a,button,input,select,textarea").forEach((function(e){var t=e.dataset._tabindex;""===t?e.removeAttribute("tabindex"):t&&e.setAttribute("tabindex",t),delete e.dataset._tabindex})),a.setAttribute("aria-hidden","false");var i=n.querySelector("a,button,input");i&&i.focus()}}e.addEventListener("click",(function(t){t.preventDefault(),document.body.classList.toggle("menu-open"),i("true"===e.getAttribute("aria-expanded"))})),t.addEventListener("click",(function(t){t.preventDefault(),document.body.classList.remove("menu-open"),i(!0),e.focus()})),a.addEventListener("click",(function(){document.body.classList.remove("menu-open"),i(!0),e.focus()})),i(!0)}();
+      </script>
+
+      <main class="main-content">
+        <div class="container"><div class="wrapper">
+    <!-- Загрузка файла -->
+    <div class="mb-4">
+        <div class="dropzone-component">
+        <label for="fontInput" class="upload-label block mb-2 font-semibold">
+        Загрузить файл шрифта    </label>
+        <div id="fontInputDropZone" class="w-full p-5 mb-4 border-2 border-dashed rounded-md text-center" style="border-color:var(--accent); background:var(--bg);">
+        <div id="fontInputDropText" class="text-muted cursor-pointer">
+            Выберите файл шрифта...                        <div class="text-sm mt-2 text-muted">Или перетащите файл сюда</div>
+                    </div>
+    </div>
+    <input type="file" 
+           id="fontInput" 
+           accept=".ttf,.otf,.woff,.woff2" 
+           multiple 
+           class="hidden">
+</div>
+        <p class="text-sm text-muted mt-2">Поддерживаемые форматы: TTF, OTF, WOFF</p>
+    </div>
+
+    <!-- Кнопки управления -->
+    <div class="flex gap-3 mb-4 flex-wrap">
+        <button id="btn-convert" class="btn-primary" disabled>
+            Конвертировать в WOFF2        </button>
+        <button id="btn-reset" class="btn">
+            Очистить        </button>
+    </div>
+
+    <!-- Список файлов -->
+    <div id="file-list" class="hidden mb-4"></div>
+
+    <!-- Результат -->
+    <div id="result-area" class="hidden">
+        <h3 class="text-lg font-semibold mb-3">Результат конвертации</h3>
+        <div id="results-container"></div>
+        
+        <div id="download-all-container" class="hidden mt-4">
+            <button id="btn-download-all" class="btn-primary">
+                Скачать все            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Подключение стилей и скриптов -->
+<link rel="stylesheet" href="https://microapps.by/services/font-to-woff2/style.css?v=1782986114">
+<script>
+// Передаём языковые данные в JavaScript
+window.svc_t = {"btn_convert":"Конвертировать в WOFF2","btn_download":"Скачать","btn_download_all":"Скачать все","status_converting":"Конвертация...","status_success":"Готово!","status_error":"Ошибка","res_original_size":"Исходный размер:","res_compressed_size":"Размер WOFF2:","res_saved":"Сэкономлено:","error_no_file":"Загрузите файл шрифта","error_invalid_format":"Неподдерживаемый формат файла","error_conversion":"Ошибка конвертации. Попробуйте другой файл."};
+</script>
+<script src="https://microapps.by/services/font-to-woff2/script.js?v=1782986114" defer></script>
+<article class="content" itemscope itemtype="https://schema.org/Article">
+            <h2 itemprop="headline">Что такое WOFF2 и зачем конвертировать шрифты?</h2>
+    
+    <div itemprop="author" itemscope itemtype="https://schema.org/Organization">
+        <meta itemprop="name" content="MicroApps Team">
+        <meta itemprop="url" content="https://microapps.by">
+    </div>
+    <meta itemprop="publisher" content="MicroApps">
+
+    <div class="wrapper" itemprop="articleBody">
+                                    <p>WOFF2 (Web Open Font Format 2) — это современный формат веб-шрифтов с улучшенным сжатием. Он обеспечивает уменьшение размера файла на 30% по сравнению с WOFF и на 50% по сравнению с TTF/OTF. Это значительно ускоряет загрузку страниц и улучшает производительность сайта.</p>
+                            <p>Конвертация шрифтов в WOFF2 — обязательный этап оптимизации веб-проекта. Меньший размер файлов означает быструю загрузку, экономию трафика пользователей и лучшие показатели в Google PageSpeed. WOFF2 поддерживается всеми современными браузерами с 2016 года.</p>
+                            <p>Наш конвертер работает полностью онлайн без установки программ. Загрузите TTF, OTF или WOFF файл, получите оптимизированный WOFF2 за секунды. Все файлы обрабатываются на сервере и не сохраняются после конвертации.</p>
+                    
+                                    <div class="qa-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="mb-4" itemprop="name">Как конвертировать несколько шрифтов в WOFF2 за один раз?</h3>
+                    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Загрузите сразу несколько файлов TTF/OTF/WOFF через кнопку выбора или перетаскиванием — после конвертации появится кнопка «Скачать все» для пакетной загрузки в ZIP-архиве.</p>
+                    </div>
+                </div>
+                            <div class="qa-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="mb-4" itemprop="name">Обязательно ли конвертировать шрифт в WOFF2, если сайт уже использует WOFF?</h3>
+                    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Не обязательно, но желательно: WOFF2 в среднем на 30% легче WOFF при том же шрифте, а поддержка браузерами практически повсеместная с 2016 года — переход почти всегда даёт чистый выигрыш в скорости загрузки.</p>
+                    </div>
+                </div>
+                            <div class="qa-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="mb-4" itemprop="name">Что делать со старыми браузерами, которые не поддерживают WOFF2?</h3>
+                    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Подключите WOFF как запасной формат через @font-face с несколькими src — браузер выберет WOFF2, если поддерживает, и откатится на WOFF в противном случае.</p>
+                    </div>
+                </div>
+                    
+                <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                            <h3 class="mb-4">Форматы веб-шрифтов</h3>
+                        <table>
+                <thead>
+                    <tr>
+                                                    <th>Формат</th>
+                                                    <th>Сжатие</th>
+                                                    <th>Поддержка браузерами</th>
+                                            </tr>
+                </thead>
+                <tbody>
+                                            <tr>
+                                                            <td>WOFF2</td>
+                                                            <td>Лучшее — Brotli, на ~30% легче WOFF</td>
+                                                            <td>Все современные браузеры с 2016 года</td>
+                                                    </tr>
+                                            <tr>
+                                                            <td>WOFF</td>
+                                                            <td>Среднее</td>
+                                                            <td>Повсеместная, включая старые браузеры</td>
+                                                    </tr>
+                                            <tr>
+                                                            <td>TTF/OTF</td>
+                                                            <td>Без сжатия для веба</td>
+                                                            <td>Работает, но не оптимизировано для сайтов</td>
+                                                    </tr>
+                                    </tbody>
+            </table>
+        </div>
+            </div>
+</article>
+<section class="howto" itemscope itemtype="https://schema.org/HowTo" aria-labelledby="howto-title">
+            <h2 id="howto-title">Как конвертировать шрифт в WOFF2</h2>
+        <div class="howto-content">
+        <ul class="howto-steps grid gap-4 grid-cols-1 md:grid-cols-2">
+                            <li itemscope itemtype="https://schema.org/HowToStep" itemprop="step" class="flex flex-col gap-6 card card--howto">
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full size-8 flex items-center justify-center bg-[var(--bg)] text-lg">1</span>
+                        <p class="text-xl font-medium" itemprop="name">Шаг 1</p>                    </div>
+                    <p itemprop="text" class="text-left">Загрузите файл шрифта (TTF, OTF или WOFF) через кнопку выбора или перетащите его в область загрузки.</p>                </li>
+                            <li itemscope itemtype="https://schema.org/HowToStep" itemprop="step" class="flex flex-col gap-6 card card--howto">
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full size-8 flex items-center justify-center bg-[var(--bg)] text-lg">2</span>
+                        <p class="text-xl font-medium" itemprop="name">Шаг 2</p>                    </div>
+                    <p itemprop="text" class="text-left">Нажмите кнопку «Конвертировать в WOFF2» и дождитесь завершения обработки.</p>                </li>
+                            <li itemscope itemtype="https://schema.org/HowToStep" itemprop="step" class="flex flex-col gap-6 card card--howto">
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full size-8 flex items-center justify-center bg-[var(--bg)] text-lg">3</span>
+                        <p class="text-xl font-medium" itemprop="name">Шаг 3</p>                    </div>
+                    <p itemprop="text" class="text-left">Скачайте конвертированный WOFF2 файл на свой компьютер. При загрузке нескольких файлов используйте «Скачать все».</p>                </li>
+                    </ul>
+    </div>
+</section><section class="faq" id="faq" itemscope itemtype="https://schema.org/FAQPage">
+    <h2 itemprop="name">FAQ</h2>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+            <span itemprop="name">Какие форматы шрифтов можно конвертировать?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div id="faq1" class="faq-answer" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Конвертер поддерживает TTF (TrueType Font), OTF (OpenType Font) и WOFF (Web Open Font Format). Все эти форматы успешно конвертируются в WOFF2.</p>
+            </div>
+        </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+            <span itemprop="name">Насколько WOFF2 меньше по размеру?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div id="faq2" class="faq-answer" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">WOFF2 обычно на 30% меньше WOFF и на 40-50% меньше TTF/OTF благодаря алгоритму сжатия Brotli. Для шрифта 100 КБ размер WOFF2 будет около 50-60 КБ.</p>
+            </div>
+        </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+            <span itemprop="name">Поддерживается ли WOFF2 всеми браузерами?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div id="faq3" class="faq-answer" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Да, WOFF2 поддерживается всеми современными браузерами: Chrome 36+, Firefox 39+, Safari 10+, Edge 14+. Для старых браузеров можно подключить WOFF в качестве fallback.</p>
+            </div>
+        </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+            <span itemprop="name">Сохраняются ли мои файлы на сервере?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div id="faq4" class="faq-answer" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Нет, все файлы обрабатываются в реальном времени и автоматически удаляются после конвертации. Мы не храним загруженные шрифты.</p>
+            </div>
+        </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+            <span itemprop="name">Можно ли конвертировать несколько шрифтов сразу?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div id="faq5" class="faq-answer" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Да, вы можете загрузить несколько файлов одновременно. После конвертации доступна кнопка «Скачать все» для пакетной загрузки в ZIP-архиве.</p>
+            </div>
+        </div>
+    </section>
+</div>
+</main>
+<footer class="w-full"><!-- Футер: копирайт и базовая информация -->
+    <p class='text-center'>&copy; MicroApps Platform</p>
+    <p class='text-center'>Платформу разрабатывает и поддерживает маркетинговое агентство <a href="https://fastup.by" target="_blank" rel="noopener">FastUp</a></p>
+</footer>
+<script src="https://microapps.by/assets/js/site-ui.min.js?v=1764809801" defer></script>
+<script src="https://microapps.by/assets/js/search.min.js?v=1764773873" defer></script>
+<script src="https://microapps.by/assets/js/smart-nav.min.js?v=1765731372" defer></script>
+<script src="https://microapps.by/assets/js/analytics.js?v=1777899346" defer></script>
+</div>
+</div>
+</body>
+</html>
