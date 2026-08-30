@@ -13,7 +13,7 @@
 
     <header class="header">
         <div class="logo">
-            Nina Sav
+            Nina Savlaeva
         </div>
 
         <nav class="main-nav">
@@ -24,21 +24,23 @@
 
         <div class="lang-switch">
             <a href="#">Ru</a>
-            <a href="#" class="active">En</a>
         </div>
     </header>
 
     <main class="hero">
         <div class="gallery-wrapper">
-            <img src="./images_nina/vld.webp" alt="Vladikavkaz Residence" class="gallery-image active">
+            <!-- Убрали active отсюда! -->
+            <img src="./images_nina/gallery-1-1.webp" alt="Slide 1" class="gallery-image">
+            <img src="./images_nina/gallery-2.webp" alt="Slide 2" class="gallery-image">
+            <img src="./images_nina/gallery-3.webp" alt="Slide 3" class="gallery-image">
+            <img src="./images_nina/gallery-4.webp" alt="Slide 4" class="gallery-image">
         </div>
 
-        <div class="hero-item bottom-left">
-            Vladikavkaz <br> Residence — 1,000 m²
+        <div class="hero-item bottom-left" id="hero-text">
+            Vladikavkaz <br>Residence — 1,000 m²
         </div>
-
-
     </main>
+
     <div class="v-space M"></div>
     <section class="about-section">
         <p class="about-text">
@@ -60,41 +62,53 @@
         <div class="projects-stagger">
 
             <!-- 1 -->
-            <div class="project-card left">
+            <a href="#" class="project-card left">
                 <h3 class="project-title">Vladikavkaz <br class="mob-br"> Residence — 1,000 m²</h3>
-                <img src="./images_nina/gallery-1.webp" alt="Vladikavkaz Residence" class="project-img">
-            </div>
+                <div class="img-mask">
+                    <img src="./images_nina/gallery-1.webp" alt="Vladikavkaz Residence" class="project-img">
+                </div>
+            </a>
 
             <!-- 2 -->
-            <div class="project-card right">
+            <a href="#" class="project-card right">
                 <h3 class="project-title">Digora <br class="mob-br"> Residence — 800 m²</h3>
-                <img src="./images_nina/gallery-2.webp" alt="Digora" class="project-img">
-            </div>
+                <div class="img-mask">
+                    <img src="./images_nina/gallery-2.webp" alt="Digora" class="project-img">
+                </div>
+            </a>
 
             <!-- 3 -->
-            <div class="project-card left">
+            <a href="#" class="project-card left">
                 <h3 class="project-title">«Brugge» <br class="mob-br"> Restaurant</h3>
-                <img src="./images_nina/gallery-3.webp" alt="Brugge Restaurant" class="project-img">
-            </div>
+                <div class="img-mask">
+                    <img src="./images_nina/gallery-3.webp" alt="Brugge Restaurant" class="project-img">
+                </div>
+            </a>
 
             <!-- 4 -->
-            <div class="project-card right">
+            <a href="#" class="project-card right">
                 <h3 class="project-title">Mountain Saniba <br class="mob-br"> house — 250 m²</h3>
-                <img src="./images_nina/gallery-4.webp" alt="Saniba" class="project-img">
-            </div>
+                <div class="img-mask">
+                    <img src="./images_nina/gallery-4.webp" alt="Saniba" class="project-img">
+                </div>
+            </a>
 
             <!-- 5 -->
-            <div class="project-card left">
+            <a href="#" class="project-card left">
                 <h3 class="project-title">Digora <br class="mob-br"> Residence — 800 m²</h3>
-                <img src="./images_nina/gallery-5.webp" alt="Digora" class="project-img">
-            </div>
+                <div class="img-mask">
+                    <img src="./images_nina/gallery-5.webp" alt="Digora" class="project-img">
+                </div>
+            </a>
 
             <!-- 6 -->
-            <div class="project-card right">
+            <a href="#" class="project-card right">
                 <h3 class="project-title">Mountain Saniba <br class="mob-br"> house — 250 m²</h3>
                 <!-- Тут можно будет вставить тег <video> вместо картинки -->
-                <img src="./images_nina/gallery-6.webp" alt="Saniba Video" class="project-img">
-            </div>
+                <div class="img-mask">
+                    <img src="./images_nina/gallery-6.webp" alt="Saniba Video" class="project-img">
+                </div>
+            </a>
 
         </div>
     </section>
@@ -150,6 +164,41 @@
         window.addEventListener('resize', applyStagger);
     </script>
 
+    <script>
+        // 1. ФИКС СКРОЛЛА: Заставляем браузер всегда начинать с самого верха при F5
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        // СЛАЙДЕР ДЛЯ ГЛАВНОГО ЭКРАНА
+        const heroImages = document.querySelectorAll('.gallery-image');
+        const heroText = document.getElementById('hero-text');
+
+        const slideTexts = [
+            "Vladikavkaz <br>Residence — 1,000 m²",
+            "Digora <br>Residence — 800 m²",
+            "«Brugge» <br>Restaurant",
+            "Mountain Saniba <br>house — 250 m²"
+        ];
+
+        let currentSlide = 0;
+
+        // 2. ФИКС АНИМАЦИИ: Добавляем класс active через 50 миллисекунд после загрузки, 
+        // чтобы браузер успел увидеть "изменение" и запустил CSS-анимацию
+        setTimeout(() => {
+            heroImages[0].classList.add('active');
+        }, 50);
+
+        function nextSlide() {
+            heroImages[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroImages.length;
+            heroImages[currentSlide].classList.add('active');
+            heroText.innerHTML = slideTexts[currentSlide];
+        }
+
+        setInterval(nextSlide, 7000);
+    </script>
 </body>
 
 </html>

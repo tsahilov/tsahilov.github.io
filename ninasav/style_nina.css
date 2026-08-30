@@ -123,11 +123,15 @@ a:hover {
 
 /* --- ГЛАВНЫЙ БЛОК И ГАЛЕРЕЯ --- */
 
+/* --- ГЛАВНЫЙ БЛОК И ГАЛЕРЕЯ --- */
 .hero {
     position: relative;
     width: 100vw;
+    /* Убрали 100vw, чтобы не было скролла по горизонтали */
     height: 100vh;
     overflow: hidden;
+    background-color: rgb(var(--background-color-RGB));
+    /* При моргании просвечивает белый фон */
 }
 
 .gallery-wrapper {
@@ -140,11 +144,33 @@ a:hover {
 }
 
 .gallery-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
+    pointer-events: none;
+
+    /* НАЧАЛЬНОЕ СОСТОЯНИЕ (скрыта и увеличена на 2%) */
+    opacity: 0;
+    transform: scale(1.09);
+
+    /* ТРЮК: Когда слайд гаснет, прозрачность исчезает за 0.4 сек, 
+       а зум "замораживается" на эти же 0.4 сек, чтобы не было резкого скачка */
+    transition: opacity 0.4s ease, transform 0s 0.4s;
+}
+
+.gallery-image.active {
+    /* АКТИВНОЕ СОСТОЯНИЕ */
+    opacity: 1;
+    transform: scale(1);
+    /* Медленно возвращается к 100% (scale 1) */
+
+    /* Быстро загорается (0.4с) и плавно отъезжает назад все 7 секунд */
+    transition: opacity 0.4s ease, transform 7s linear;
 }
 
 /* --- НИЖНИЕ ЭЛЕМЕНТЫ (ИНФО И СЧЕТЧИК) --- */
@@ -284,7 +310,18 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    transition: margin-top 0.3s ease;
+
+    /* Состояние покоя (когда убрали курсор): 
+        margin-top от скрипта работает за 0.3s, 
+       а цвет текста плавно остывает за 0.6s */
+    transition: margin-top 0.3s ease, color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    /* Состояние наведения: 
+        цвет вспыхивает моментально (0s), 
+       а margin-top не трогаем, чтобы не сломать JS */
+    transition: margin-top 0.3s ease, color 0s;
 }
 
 /* ЛЕВЫЕ КАРТОЧКИ */
@@ -310,11 +347,50 @@ a:hover {
     font-weight: 400;
 }
 
+/* --- МАСКА ДЛЯ КАРТИНКИ (держит рамки) --- */
+.img-mask {
+    width: 100%;
+    /* Стартовое скругление теперь тут */
+    border-radius: 12px;
+
+    /* Самое главное: обрезает картинку по границам при зуме! */
+    overflow: hidden;
+
+    /* Анимируем только возвращение скругления (0.6s) */
+    transition: border-radius 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Защита от виджета Яндекс Браузера */
+    pointer-events: none;
+}
+
+/* --- САМА ФОТОГРАФИЯ (зумируется внутри маски) --- */
 .project-img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 2.5rem;
+
+    filter: grayscale(100%);
+    transform: scale(1);
+
+    /* Анимируем цвет и зум (0.6s) */
+    transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🎯 ХОВЕР НА КАРТОЧКУ: Анимируем маску (скругление) */
+.project-card:hover .img-mask {
+    border-radius: 4rem;
+    transition: border-radius 0.4s;
+}
+
+/* 🎯 ХОВЕР НА КАРТОЧКУ: Анимируем картинку (цвет и зум) */
+.project-card:hover .project-img {
+    filter: grayscale(0%);
+
+    /* Поскольку рамки больше не едут, можно смело сделать скейл побольше, например 1.05 */
+    transform: scale(1.005);
+
+    transition: filter 0.2s, transform 0.2s;
 }
 
 /* ============================================= */
@@ -509,5 +585,38 @@ a:hover {
 @media (max-width: 768px) {
     .mob-br {
         display: inline;
+    }
+}
+
+/* ============================================= */
+/* КАСТОМНЫЙ СКРОЛЛБАР (ТОЛЬКО ДЛЯ ПК)           */
+/* ============================================= */
+
+@media (min-width: 769px) {
+
+    /* Стандарт для Firefox */
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #d6d6d6 transparent;
+    }
+
+    /* Настройки для Chrome, Edge, Safari */
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #d6d6d6;
+        border-radius: 20px;
+        border: 4px solid rgb(var(--background-color-RGB));
+        background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(var(--hover-color-RGB));
     }
 }
