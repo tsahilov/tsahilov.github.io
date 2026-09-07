@@ -387,7 +387,7 @@ body {
     position: relative;
     font-weight: 500;
     font-size: var(--main-text-size);
-    color: rgb(var(--accent-red-RGB));
+    color: rgb(var(--main-text-RGB));
     margin: 0;
     line-height: normal;
 }
@@ -621,4 +621,17 @@ body {
         font-size: 1.4rem;
         padding-top: .6rem;
     }
+}
+
+.case-gallery-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+    width: 100%;
+    align-items: start;
+}
+
+.case-gallery-1-1-1 .case-image {
+    /* Легкое скругление углов */
+    border-radius: 6px;
 }
