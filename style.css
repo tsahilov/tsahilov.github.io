@@ -348,6 +348,10 @@ body {
 .portfolio-case {
     width: 70%;
     margin-bottom: 6rem;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 /* Отменяем нижний отступ у самого последнего кейса в списке */
