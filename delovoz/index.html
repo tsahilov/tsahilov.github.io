@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Деловоз — переезды по России</title>
+  
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="./css/delovoz.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="Деловоз — на главную">
+        <img src="./images/delovoz-logo.svg" alt="Деловоз">
+      </a>
+
+
+      <div class="topbar__actions">
+        <a class="button button--primary" href="#calculator">Заказать перевозку</a>
+        <a class="button button--secondary" href="#">Отследить</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="page">
+    <section class="hero">
+      <h1 class="hero__title"><span>Перевезём вещи в ваш новый дом или квартиру:</span> разберём&nbsp;и&nbsp;соберём мебель, разложим посуду, подключим технику, расставим всё по комнатам&nbsp;и&nbsp;вывезем мусор</h1>
+      <div class="hero__links">
+        <a href="#">2 251 оценка на Яндексе</a>
+        <a href="#">420 оценок в Google</a>
+        <a href="#">782 оценки на 2GIS</a>
+        <a class="hero__link--secondary" href="#">Чем ещё помогаем</a>
+      </div>
+    </section>
+
+    <section class="moves section-block">
+      <h2>Уже завершили <span id="move-count" data-target="47624" aria-label="47 624">00 000</span> переезда по России</h2>
+      <div class="wide-rule"></div>
+      <p class="cities"><strong>Работаем в 54 городах:</strong>
+        <a class="city-link" href="#calculator">Москва</a>,
+        <a class="city-link" href="#calculator">Санкт-Петербург</a>,
+        <a class="city-link" href="#calculator">Новосибирск</a>,
+        <a class="city-link" href="#calculator">Екатеринбург</a>,
+        <a class="city-link" href="#calculator">Казань</a>,
+        <a class="city-link" href="#calculator">Нижний Новгород</a>,
+        <a class="city-link" href="#calculator">Красноярск</a>,
+        <a class="city-link" href="#calculator">Челябинск</a>,
+        <a class="city-link" href="#calculator">Самара</a>,
+        <a class="city-link" href="#calculator">Уфа</a>,
+        <a class="city-link" href="#calculator">Ростов-на-Дону</a>,
+        <a class="city-link" href="#calculator">Краснодар</a>,
+        <a class="city-link" href="#calculator">Омск</a>,
+        <a class="city-link" href="#calculator">Воронеж</a>,
+        <a class="city-link" href="#calculator">Пермь</a>,
+        <a class="city-link" href="#calculator">Волгоград</a>,
+        <a class="city-link" href="#calculator">Саратов</a>,
+        <a class="city-link" href="#calculator">Тюмень</a>,
+        <a class="city-link" href="#calculator">Тольятти</a>,
+        <a class="city-link" href="#calculator">Барнаул</a>,
+        <a class="city-link" href="#calculator">Ижевск</a>,
+        <a class="city-link" href="#calculator">Владивосток</a>,
+        <a class="city-link" href="#calculator">Хабаровск</a>,
+        <a class="city-link" href="#calculator">Ульяновск</a>,
+        <a class="city-link" href="#calculator">Иркутск</a>,
+        <a class="city-link" href="#calculator">Владивосток</a>,
+        <a class="city-link" href="#calculator">Ярославль</a>,
+        <a class="city-link" href="#calculator">Севастополь</a>,
+        <a class="city-link" href="#calculator">Ставрополь</a>,
+        <a class="city-link" href="#calculator">Томск</a>,
+        <a class="city-link" href="#calculator">Кемерово</a>,
+        <a class="city-link" href="#calculator">Набережные Челны</a>,
+        <a class="city-link" href="#calculator">Оренбург</a>,
+        <a class="city-link" href="#calculator">Новокузнецк</a>,
+        <a class="city-link" href="#calculator">Рязань</a>,
+        <a class="city-link" href="#calculator">Балашиха</a>,
+        <a class="city-link" href="#calculator">Пенза</a>,
+        <a class="city-link" href="#calculator">Чебоксары</a>,
+        <a class="city-link" href="#calculator">Липецк</a>,
+        <a class="city-link" href="#calculator">Калининград</a>,
+        <a class="city-link" href="#calculator">Астрахань</a>,
+        <a class="city-link" href="#calculator">Тула</a>,
+        <a class="city-link" href="#calculator">Киров</a>,
+        <a class="city-link" href="#calculator">Сочи</a>,
+        <a class="city-link" href="#calculator">Курск</a>,
+        <a class="city-link" href="#calculator">Улан-Удэ</a>,
+        <a class="city-link" href="#calculator">Тверь</a>,
+        <a class="city-link" href="#calculator">Магнитогорск</a>,
+        <a class="city-link" href="#calculator">Сургут</a>,
+        <a class="city-link" href="#calculator">Брянск</a>,
+        <a class="city-link" href="#calculator">Иваново</a>,
+        <a class="city-link" href="#calculator">Якутск</a>,
+        <a class="city-link" href="#calculator">Владимир</a>,
+        <a class="city-link" href="#calculator">Белгород</a>.
+      </p>
+    </section>
+
+    <section class="pricing section-block">
+      <div class="pricing__head">
+        <h3 class="ruled-heading">Сколько стоит?</h3>
+        <input id="phone" class="consultation__input" type="tel" inputmode="numeric" autocomplete="tel" aria-label="Ваш номер телефона" placeholder="Ваш номер телефона">
+      </div>
+
+      <div class="pricing__body">
+        <div class="pricing__content">
+          <h4>Переезд в другой город стоит от 20 000 ₽</h4>
+          <p>Двух одинаковых переездов не бывает, поэтому цена всегда разная. Мы учитываем много факторов и отталкиваемся от вашей ситуации:</p>
+
+          <div class="factors">
+            <div class="factor-row factor-row--first">
+              <h4>Расстояние и объём</h4>
+              <p>Мы оцениваем количество вещей, чтобы подобрать идеальную машину — так вам не придётся переплачивать за полупустой кузов.</p>
+            </div>
+            <div class="factor-row">
+              <h4>Сложность сборки и хрупкость</h4>
+              <p>Всю упаковку мы берём на себя. Но стоимость будет зависеть от того, сколько у вас бьющихся предметов и насколько сложная мебель, которую нужно разобрать, а потом собрать на новом месте.</p>
+            </div>
+            <div class="factor-row">
+              <h4>Поэтапный переезд</h4>
+              <p>Иногда невозможно увезти всё сразу. В таких случаях мы забираем основную часть вещей заранее, а остальное — прямо перед вашим отъездом.</p>
+            </div>
+            <div class="factor-row">
+              <h4>Приоритет и хранение</h4>
+              <p>Самые нужные вещи мы упакуем отдельно и завезём в первую очередь, чтобы вам было комфортно с первого дня. А если новое жильё ещё не готово, мы бережно сохраним остальную мебель на нашем складе.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="consultation" id="consultation-form" novalidate>
+          <button class="button button--dark consultation__button" type="submit"><span class="consultation__button-text">Получить консультацию</span><span class="consultation__button-check" aria-hidden="true">✓</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="text-section section-block text-section--narrow">
+      <h3 class="ruled-heading">Как обратиться к нам?</h3>
+      <div class="section-copy">
+        <h4>Просто покажите нам сколько будет вещей.</h4>
+        <p>Лучше всего прислать фото, видео или кружочки в телеграм — мы оценим и назовём точную стоимость. Можно просто позвонить и рассказать, менеджер подскажет. Если уже всё измерили, есть калькулятор.</p>
+        <p class="inline-links"><a href="#">Чат в телеграме</a><a href="#">+7 905 905 55 05</a></p>
+      </div>
+    </section>
+
+    <section id="calculator" class="move-calculator section-block" aria-label="Калькулятор стоимости переезда">
+      <form id="move-calculator-form" class="move-calculator__form" novalidate>
+        <div class="calculator-block">
+          <h4 class="calculator-label">Откуда - Куда</h4>
+          <div class="calculator-route">
+            <select id="calc-from" class="calculator-route__city" aria-label="Город отправления">
+              <option>Владикавказ</option>
+            </select>
+            <button id="calc-swap" class="calculator-route__swap" type="button" aria-label="Поменять города местами">
+              <img src="./images/arrows-down-up.svg" alt="">
+            </button>
+            <select id="calc-to" class="calculator-route__city" aria-label="Город назначения">
+              <option>Санкт-Петербург</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calculator-block calculator-cargo">
+          <h4 class="calculator-label">Тип, размер, вес и количество</h4>
+          <div id="calc-items" class="calculator-items" aria-live="polite"></div>
+        </div>
+
+        <div class="calculator-add">
+          <h4 class="calculator-add__label">Добавить ещё</h4>
+          <div class="calculator-add__buttons">
+            <button type="button" class="calculator-add__button" data-preset="furniture">Мебель</button>
+            <button type="button" class="calculator-add__button" data-preset="tech">Технику</button>
+            <button type="button" class="calculator-add__button" data-preset="box">Коробку</button>
+          </div>
+        </div>
+
+        <div class="calculator-total">
+          <strong>Стоить будет примерно: <span id="calc-total">12 490 ₽</span></strong>
+        </div>
+      </form>
+    </section>
+
+    <section class="text-section section-block text-section--narrow">
+      <h3 class="ruled-heading">А какие гарантии?</h3>
+      <div class="section-copy">
+        <p>В каждом грузовике стоят камеры с ночным видением. Вы можете в любой момент открыть трансляцию и проверить, как едет ваш груз. Если в дороге пропадёт связь, мы сохраним и покажем запись последних получаса до обрыва интернета.</p>
+      </div>
+    </section>
+
+    <section class="contacts section-block text-section--narrow">
+      <h3 class="ruled-heading">Контакты</h3>
+      <div class="section-copy contacts__grid">
+        <div>
+          <h4>Для клиентов:</h4>
+          <div class="contact-list">
+            <p class="contact-row"><span>Telegram</span><a href="#">@delovoz</a></p>
+            <p class="contact-row"><span>Max</span><a href="#">@delovoz</a></p>
+            <p class="contact-row"><span>Телефон</span><a href="#">+7 905 905 55 05</a></p>
+          </div>
+        </div>
+        <div>
+          <h4>Для бизнес-предложений:</h4>
+          <p class="contact-row"><span>Почта</span><a href="#">delovoz@yandex.ru</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page">
+    <div class="footer__rule"></div>
+    <p>ООО «Деловоз»&nbsp;&nbsp; 2022 — 2025<br>ИНН 8942794801, ОГРНИП 85495849732300013, р/с 88589-2484294 в ООО «СБЕР», БИК 312000084</p>
+  </footer>
+
+  <script>
+    (() => {
+      const phone = document.querySelector('#phone');
+      const form = document.querySelector('#consultation-form');
+      const button = form?.querySelector('.consultation__button');
+      const cities = document.querySelectorAll('.city-link');
+      const calculator = document.querySelector('#calculator');
+      const moveCount = document.querySelector('#move-count');
+      const calcFrom = document.querySelector('#calc-from');
+      const calcTo = document.querySelector('#calc-to');
+      const calcSwap = document.querySelector('#calc-swap');
+      const calcItems = document.querySelector('#calc-items');
+      const calcTotal = document.querySelector('#calc-total');
+      const calcAddButtons = document.querySelectorAll('.calculator-add__button');
+
+
+      const animateMoveCount = () => {
+        if (!moveCount) return;
+
+        const target = Number(moveCount.dataset.target || 47624);
+        const duration = 800;
+        const start = performance.now();
+        const formatter = new Intl.NumberFormat('ru-RU');
+
+        // Быстро в начале, мягко замедляется к финальному числу.
+        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+        moveCount.textContent = '0';
+
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const easedProgress = easeOutCubic(progress);
+          const value = Math.round(target * easedProgress);
+
+          moveCount.textContent = formatter.format(value);
+
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            moveCount.textContent = formatter.format(target);
+          }
+        };
+
+        requestAnimationFrame(tick);
+      };
+
+      animateMoveCount();
+
+      const formatPhone = (digits) => {
+        const d = digits.replace(/\D/g, '').replace(/^7/, '').slice(0, 10);
+        let out = '+7';
+        if (!d.length) return out;
+        out += ' ' + d.slice(0, 3);
+        if (d.length > 3) out += ' ' + d.slice(3, 6);
+        if (d.length > 6) out += ' ' + d.slice(6, 8);
+        if (d.length > 8) out += ' ' + d.slice(8, 10);
+        return out;
+      };
+
+      if (phone) {
+        phone.addEventListener('focus', () => {
+          if (!phone.value.trim()) phone.value = '+7';
+          button?.classList.remove('is-sent');
+        });
+
+        phone.addEventListener('blur', () => {
+          if (phone.value.trim() === '+7') phone.value = '';
+        });
+
+        phone.addEventListener('input', () => {
+          phone.value = formatPhone(phone.value);
+          button?.classList.remove('is-sent');
+        });
+      }
+
+      form?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (phone) {
+          phone.value = '';
+          phone.blur();
+        }
+        button?.classList.add('is-sent');
+        setTimeout(() => button?.classList.remove('is-sent'), 1800);
+      });
+
+      const cityNames = [...new Set(Array.from(cities, (city) => city.textContent.trim()))];
+
+      const fillCitySelect = (select, selectedCity) => {
+        if (!select) return;
+        select.innerHTML = '';
+        cityNames.forEach((city) => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          option.selected = city === selectedCity;
+          select.appendChild(option);
+        });
+      };
+
+      fillCitySelect(calcFrom, 'Владикавказ');
+      fillCitySelect(calcTo, 'Санкт-Петербург');
+
+      const presets = {
+        furniture: { type: 'Мебель', length: 120, width: 60, height: 80, weight: 30 },
+        tech: { type: 'Техника', length: 60, width: 60, height: 170, weight: 45 },
+        box: { type: 'Коробка', length: 60, width: 40, height: 40, weight: 12 }
+      };
+
+      const items = [
+        { type: 'Техника', length: 160, width: 90, height: 200, weight: 20 }
+      ];
+
+      const typeMultiplier = {
+        'Мебель': 1.25,
+        'Техника': 1.15,
+        'Коробка': 0.85
+      };
+
+      const money = new Intl.NumberFormat('ru-RU');
+
+      const estimatePrice = () => {
+        if (!calcTotal) return;
+
+        const fromIndex = Math.max(0, cityNames.indexOf(calcFrom?.value || ''));
+        const toIndex = Math.max(0, cityNames.indexOf(calcTo?.value || ''));
+        const routeDifference = Math.abs(fromIndex - toIndex);
+        const routeCost = fromIndex === toIndex ? 3400 : 5200 + routeDifference * 80;
+
+        const cargoCost = items.reduce((sum, item) => {
+          const volume = Math.max(0, item.length) * Math.max(0, item.width) * Math.max(0, item.height) / 1_000_000;
+          const raw = 450 + volume * 1250 + Math.max(0, item.weight) * 18;
+          return sum + raw * (typeMultiplier[item.type] || 1);
+        }, 0);
+
+        const total = Math.max(4800, routeCost + cargoCost + 620);
+        const rounded = Math.round(total / 10) * 10;
+        calcTotal.textContent = `${money.format(rounded)} ₽`;
+      };
+
+      const numberInput = (field, value, unit, min, max) => `
+        <label class="calculator-field">
+          <span>${field}:</span>
+          <span class="calculator-field__value">
+            <input type="number" value="${value}" min="${min}" max="${max}" inputmode="decimal">
+            <em>${unit}</em>
+          </span>
+        </label>`;
+
+      const syncItemNumbers = () => {
+        calcItems?.querySelectorAll('.calculator-item').forEach((row, index) => {
+          const number = row.querySelector('.calculator-item__number');
+          if (number) number.textContent = String(index + 1).padStart(2, '0');
+        });
+      };
+
+      const createItemRow = (item) => {
+        if (!calcItems) return;
+
+        const row = document.createElement('div');
+        row.className = 'calculator-item';
+        row.innerHTML = `
+          <div class="calculator-item__type">
+            <span class="calculator-item__number"></span>
+            <span class="calculator-item__type-select">
+              <select aria-label="Тип вещи">
+                <option${item.type === 'Техника' ? ' selected' : ''}>Техника</option>
+                <option${item.type === 'Мебель' ? ' selected' : ''}>Мебель</option>
+                <option${item.type === 'Коробка' ? ' selected' : ''}>Коробка</option>
+              </select>
+            </span>
+          </div>
+          <div class="calculator-item__dimensions">
+            ${numberInput('Длина', item.length, 'см', 1, 1000)}
+            ${numberInput('Ширина', item.width, 'см', 1, 1000)}
+            ${numberInput('Высота', item.height, 'см', 1, 1000)}
+          </div>
+          <div class="calculator-item__weight">
+            ${numberInput('Вес', item.weight, 'кг', 1, 5000)}
+          </div>
+          <button type="button" class="calculator-item__delete" aria-label="Удалить вещь">
+            <img src="./images/trash.svg" alt="">
+          </button>`;
+
+        const select = row.querySelector('select');
+        const inputs = row.querySelectorAll('input');
+        const deleteButton = row.querySelector('.calculator-item__delete');
+
+        select?.addEventListener('change', () => {
+          item.type = select.value;
+          estimatePrice();
+        });
+
+        const fitNumberInput = (input) => {
+          if (CSS.supports('field-sizing', 'content')) {
+            input.style.width = '';
+            return;
+          }
+
+          const styles = getComputedStyle(input);
+          const canvas = fitNumberInput.canvas || (fitNumberInput.canvas = document.createElement('canvas'));
+          const context = canvas.getContext('2d');
+          context.font = styles.font;
+          const value = input.value || '0';
+          input.style.width = `${Math.ceil(context.measureText(value).width + 2)}px`;
+        };
+
+        const fields = ['length', 'width', 'height', 'weight'];
+        inputs.forEach((input, index) => {
+          fitNumberInput(input);
+
+          input.addEventListener('input', () => {
+            fitNumberInput(input);
+            const numeric = Number(input.value);
+            item[fields[index]] = Number.isFinite(numeric) ? numeric : 0;
+            estimatePrice();
+          });
+
+          input.addEventListener('blur', () => {
+            const min = Number(input.min) || 1;
+            const max = Number(input.max) || 1000;
+            const clamped = Math.min(max, Math.max(min, Number(input.value) || min));
+            input.value = String(clamped);
+            fitNumberInput(input);
+            item[fields[index]] = clamped;
+            estimatePrice();
+          });
+        });
+
+        deleteButton?.addEventListener('click', () => {
+          const index = items.indexOf(item);
+          if (index !== -1) items.splice(index, 1);
+          row.remove();
+          syncItemNumbers();
+          estimatePrice();
+        });
+
+        calcItems.appendChild(row);
+        syncItemNumbers();
+      };
+
+      items.forEach(createItemRow);
+      estimatePrice();
+
+      calcFrom?.addEventListener('change', estimatePrice);
+      calcTo?.addEventListener('change', estimatePrice);
+
+      calcSwap?.addEventListener('click', () => {
+        if (!calcFrom || !calcTo) return;
+        const from = calcFrom.value;
+        calcFrom.value = calcTo.value;
+        calcTo.value = from;
+        estimatePrice();
+      });
+
+      calcAddButtons.forEach((addButton) => {
+        addButton.addEventListener('click', () => {
+          const preset = presets[addButton.dataset.preset];
+          if (!preset) return;
+          const item = { ...preset };
+          items.push(item);
+          createItemRow(item);
+          estimatePrice();
+        });
+      });
+
+      cities.forEach((city) => {
+        city.addEventListener('click', () => {
+          if (!calcFrom) return;
+          const cityName = city.textContent.trim();
+          if (cityNames.includes(cityName)) calcFrom.value = cityName;
+          estimatePrice();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,332 +1,268 @@
-<!DOCTYPE html>
-<html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Расширенный заголовок (до 60 символов) -->
-    <title>Супер-дизайнер Алан</title>
+    <title>Алан Цахилов — дизайнер и редактор</title>
 
-    <!-- Описание сайта для сниппета в Гугле/Яндексе (до 160 символов) -->
-    <meta name="description"
-        content="Запускаю информационные продукты: пишу тексты, рисую графику, верстаю и публикую сайты.">
+    
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="description" content="Помогаю запускать сайты и выстраивать коммуникацию: исследую, пишу, проектирую и верстаю.">
+    <link rel="canonical" href="https://alantsahilov.ru/">
 
-    <!-- Стандартная иконка для всех браузеров -->
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Алан Цахилов">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:url" content="https://alantsahilov.ru/">
+    <meta property="og:title" content="Алан Цахилов — дизайнер и редактор">
+    <meta property="og:description" content="Помогаю запускать сайты и выстраивать коммуникацию: исследую, пишу, проектирую и верстаю.">
+    <meta property="og:image" content="https://alantsahilov.ru/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Подпись Алана Цахилова на белом фоне">
 
-    <!-- Иконка для закладок на iPhone/iPad (чтобы на экране «Домой» смотрелось красиво) -->
-    <link rel="apple-touch-icon" href="./images/favicon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Алан Цахилов — дизайнер и редактор">
+    <meta name="twitter:description" content="Помогаю запускать сайты и выстраивать коммуникацию: исследую, пишу, проектирую и верстаю.">
+    <meta name="twitter:image" content="https://alantsahilov.ru/og-cover.png">
+    <meta name="twitter:image:alt" content="Подпись Алана Цахилова на белом фоне">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts.css">
-    <script src="./script.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Алан Цахилов",
+        "url": "https://alantsahilov.ru/"
+    }
+    </script>
+
+
+    <link rel="stylesheet" href="home.css">
+
+    <script src="script.js" defer></script>
 </head>
 
-<body>
-    <!-- Отступ сверху страницы -->
-    <div class="v-space S"></div>
+<body class="ids home-page">
 
-    <div class="wrapper">
+    <div class="ids__wrapper">
+        <header class="home-topbar">
+            <div class="home-topbar__inner">
 
-        <!-- ВЕРХНЯЯ НАВИГАЦИЯ (теперь она на всю ширину wrapper) -->
-        <nav class="top-nav">
-            <div class="header-links">
-                <a href="https://t.me/pepenguin">Телеграм</a>
-                <a href="https://web.telegram.org/k/#@nedesigneralan">Канал</a>
-            </div>
+                <div class="home-topbar__identity">
+                    <img src="./images/alan-2.jpg" alt="" class="home-topbar__avatar">
 
-            <div class="lang-switcher">
-                <a href="#" class="active">Русский</a>
-                <a href="#">English</a>
-            </div>
-        </nav>
+                    <span>
+                        <a href="./" class="home-topbar__name">Алан<span class="home-topbar__surname">
+                                Цахилов</span></a>
+                        <span class="home-topbar__role">&nbsp;—&nbsp; дизайнер и редактор.</span>
+                    </span>
+                </div>
 
-        <div class="v-space M"></div>
+                <div class="home-topbar__language" aria-label="Язык сайта">
+                    <span class="is-active">ru</span>
+                    <span>en</span>
+                </div>
 
-        <!-- ШАПКА (а вот она уже ограничена text-width) -->
-        <header class="main-header text-width">
+                <a class="home-topbar__contact" href="https://t.me/pepenguin">Написать</a>
 
-            <!-- Аватарка -->
-            <img src="./images/alan-tsahilov-face.png" alt="Алан Цахилов" class="avatar">
-
-            <!-- Заголовок и описание -->
-            <p class="header-title">
-                Алан — дизайнер <span class="mobile-line">и&nbsp;<span class="typewriter-text"
-                        id="typewriter">верстальщик</span><span class="typewriter-cursor">|</span></span>
-            </p>
-            <p class="header-desc">
-                Запускаю информационные продукты: пишу тексты, рисую графику,
-                верстаю и публикую сайты.
-            </p>
-            <p class="header-desc">
-                Помогаю людям, компаниям, сервисам и&nbsp;брендам структурированно и&nbsp;просто доносить свои мысли
-                до&nbsp;других
-                людей, компаний, сервисов, и&nbsp;брендов.
-            </p>
-            <!-- Новые ссылки про био и галерею -->
-            <div class="bio-links">
-                <a href="about.html">Если прям интересно про&nbsp;меня &#8594;</a>
-                <a href="#" class="link-disabled">Проект «галерея» &#8594;</a>
             </div>
         </header>
-    </div>
 
-    <!-- ================================================= -->
-    <!-- =================================================== -->
-    <!-- ================================================== -->
-
-    <!-- Секция с проектами -->
-    <div class="v-space L"></div>
-    <div class="wrapper">
         <main>
 
-            <!-- Проект: Калькулятор -->
-            <article class="portfolio-case">
+            <div class="ids__space L"></div>
+            <section class="home-intro" aria-label="Обо мне">
 
-                <!-- ЗАЛИПАЮЩИЙ ЗАГОЛОВОК С ЛИНИЕЙ -->
-                <div class="case-header-sticky">
-                    <h2 class="case-title">Калькулятор сложных финансовых вычислений</h2>
-                </div>
+                <img class="home-signature" src="./images/alantsahilovpodpis.svg" alt="Подпись Алана Цахилова">
+                <div class="ids__space S"></div>
 
-                <div class="v-space S"></div>
-
-                <!-- Картинка проекта -->
-                <a href="https://chtokchemu.ru/" class="case-image-link">
-                    <img src="./images/image_4.webp" alt="Интерактивный калькулятор" class="case-image bordered">
-                </a>
-
-                <div class="v-space S"></div>
-
-                <!-- Описание проекта (Начало) -->
-                <div class="case-description">
-                    <p>Сделал калькулятор, который без&nbsp;форм и&nbsp;банковского канцелярита
-                        помогает быстренько прикинуть:
-                        сколько денег заработаешь с&nbsp;вклада, сколько из&nbsp;них уйдёт государству, сколько месяцев
-                        надо копить на&nbsp;разные вещи, сколько можно откладывать денег с&nbsp;зарплаты в&nbsp;месяц
-                        и&nbsp;сколько это получится в&nbsp;год.
+                <div class="home-intro__about">
+                    <p>
+                        Могу помочь с запуском собственного сайта. Это может быть, например: портфолио,
+                        страница о&nbsp;бизнесе или новом продукте. Подходит когда надо рассказать о какой-то
+                        услуге, часто специфичной, сформулировать предложение.
                     </p>
-                    <p>Можно играть со&nbsp;сценариями: менять суммы, сроки, проценты. Прикидывать варианты вложений
-                        и&nbsp;доходов. Калькулятор даёт моментальную обратную связь.</p>
+
+                    <p>
+                        А ещё с выстраиванием эффективной коммуникации. Это могут быть таблички,
+                        указатели, постеры, меню и что угодно ещё, что содержит продающее <s>или нет</s> послание
+                        для каких угодно людей.
+                    </p>
+
+                    <p class="home-intro__link">
+                        <a href="about.html">Про мой дизайнерский и в целом путь&nbsp;&rarr;</a>
+                    </p>
                 </div>
 
-                <!-- СЕТКА ИЗ 2-Х MP4 ВИДЕО (На всю ширину wrapper) -->
-                <div class="case-gallery-1-1">
-                    <a href="#" class="case-image-link">
-                        <video src="./images/твое-видео-1.mp4" class="case-image bordered" autoplay loop muted
-                            playsinline></video>
+            </section>
+
+
+
+
+
+            <div class="ids__space L"></div>
+
+            <section class="portfolio-filter" aria-label="Фильтр проектов">
+                <span class="portfolio-filter__title">Чаще всего я делаю:</span>
+
+                <div class="portfolio-filter__scroll">
+                    <span class="portfolio-filter__item">
+                        <button class="portfolio-filter__button" type="button" data-filter="business-sites"
+                            aria-pressed="false">
+                            Сайты для бизнеса
+                        </button>
+                    </span>
+
+                    <span class="portfolio-filter__item">
+                        <button class="portfolio-filter__button" type="button" data-filter="own-products"
+                            aria-pressed="false">
+                            Свои продукты
+                        </button>
+                    </span>
+
+                    <span class="portfolio-filter__item">
+                        <button class="portfolio-filter__button" type="button" data-filter="communications"
+                            aria-pressed="false">
+                            Коммуникации
+                        </button>
+                    </span>
+
+
+                    <span class="portfolio-filter__item">
+                        <button class="portfolio-filter__button" type="button" data-filter="social-graphics"
+                            aria-pressed="false">
+                            Графику для соц. сетей
+                        </button>
+                    </span>
+
+                    <span class="portfolio-filter__item">
+                        <button class="portfolio-filter__button" type="button" data-filter="posters"
+                            aria-pressed="false">
+                            Плакаты и постеры
+                        </button>
+                    </span>
+
+                    <span class="portfolio-filter__item">
+                        <button class="portfolio-filter__button" type="button" data-filter="case-visuals"
+                            aria-pressed="false">
+                            Кейвижуалы
+                        </button>
+                    </span>
+                </div>
+            </section>
+
+
+
+
+            <div class="ids__space M"></div>
+
+            <section class="projects-gallery" aria-label="Галерея проектов">
+
+                <article class="project-card project-card--delovoz project-card--linked mobile-span-6"
+                    data-categories="business-sites">
+
+                    <a href="./delovoz/" class="project-card__media delovoz-preview">
+                        <img src="./images/delovoz-preview.webp" alt="Сайт компании-перевозчика Деловоз"
+                            class="project-card__image" draggable="false">
                     </a>
 
-                    <a href="#" class="case-image-link">
-                        <video src="./images/твое-видео-2.mp4" class="case-image bordered" autoplay loop muted
-                            playsinline></video>
+                    <p class="project-card__title">
+                        Сайт компании-перевозчика&nbsp;&rarr;
+                    </p>
+                </article>
+
+
+                <article class="project-card project-card--ads project-card--linked mobile-span-6"
+                    data-categories="communications posters">
+
+                    <a href="./projects/ads/" class="project-card__media inline-gallery" data-inline-gallery>
+                        <img src="./images/ads-01.webp" alt="" class="project-card__image" draggable="false">
+                        <img src="./images/ads-02.webp" alt="" class="project-card__image" draggable="false">
+                        <img src="./images/ads-03.webp" alt="" class="project-card__image" draggable="false">
                     </a>
-                </div>
-                <div class="v-space S"></div>
-                <!-- Описание проекта (Продолжение) -->
-                <div class="case-description">
-                    <p>Проект реализован на&nbsp;легком независимом стеке — HTML, CSS и&nbsp;JavaScript.
-                        Развёрнут на&nbsp;собственном домене, работает по&nbsp;безопасному протоколу. Всё это
-                        под&nbsp;гитом.</p>
-                    <p>Релиз: 20 августа, 2026 года. Сейчас работаю над&nbsp;сценарием калькулятора кредитов
-                        и&nbsp;ипотеки. Возможно, уже добавлено.</p>
 
-                    <a href="https://chtokchemu.ru/" class="case-link" target="_blank">chtokchemu.ru &#8594;</a>
-                </div>
-            </article>
-
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-
-
-            <!-- Проект: Прагматика -->
-            <article class="portfolio-case">
-
-                <!-- ЗАЛИПАЮЩИЙ ЗАГОЛОВОК С ЛИНИЕЙ (Сам станет оранжевым!) -->
-                <div class="case-header-sticky">
-                    <h2 class="case-title">Заставки для&nbsp;чат-ботов&nbsp;Прагматики</h2>
-                </div>
-
-                <div class="v-space S"></div>
-
-                <!-- СЕТКА ИЗ 3-Х ВИДЕО (MP4) -->
-                <div class="case-gallery-2-1-1">
-                    <video src="./images/grade.mp4" class="case-image" autoplay loop muted playsinline></video>
-                    <video src="./images/pragmatrica.mp4" class="case-image" autoplay loop muted playsinline></video>
-                    <video src="./images/coast.mp4" class="case-image" autoplay loop muted playsinline></video>
-                </div>
-                <div class="v-space S"></div>
-
-                <div class="case-description">
-                    <p>Это было открытое тестовое в&nbsp;Прагматике. Хотели свежий взгляд на&nbsp;заставки
-                        для&nbsp;своих ботов.
-                        Условие одно: просто покреативить.
+                    <p class="project-card__title">
+                        Человечные объявления в лифте
                     </p>
-                    <p>Нашёл рефы в&nbsp;пинтересте, попиксельно отрисовал в&nbsp;фигме, анимировал в&nbsp;Jitter.</p>
-                    <p>Сделал просто яркие, сочные и&nbsp;залипательные штуки. Создавались в&nbsp;вакууме,
-                        но&nbsp;привлекают
-                        внимание
-                        моментально, значит работают.</p>
-                    <p>Горжусь ими, но&nbsp;на&nbsp;работу не&nbsp;позвали.</p>
-                </div>
-
-            </article>
-
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
+                </article>
 
 
-            <!-- Проект: Вкусвилл -->
-            <article class="portfolio-case">
+                <article class="project-card project-card--coffee mobile-span-2" data-categories="communications">
 
-                <!-- ЗАЛИПАЮЩИЙ ЗАГОЛОВОК С ЛИНИЕЙ (Сам станет оранжевым!) -->
-                <div class="case-header-sticky">
-                    <h2 class="case-title">Рекламные промо для&nbsp;Вкусвилла</h2>
-                </div>
+                    <div class="project-card__media">
+                        <img src="./images/filter-11-preview.webp" alt="Логотип кофейни" class="project-card__image"
+                            draggable="false">
+                    </div>
 
-                <div class="v-space S"></div>
-                
-                <img src="./images/vv-4.webp" alt="Интерфейс сайта компании грузоперевозок «Деловоз»"
-                class="case-image bordered">
-                <div class="v-space S"></div>
-                <!-- СЕТКА ИЗ 3-Х ФОТО -->
-                <div class="case-gallery-1-1-1">
-                    <img src="./images/vv-1.webp" alt="" class="case-image">
-                    <img src="./images/vv-2.webp" alt="" class="case-image">
-                    <img src="./images/vv-3.webp" alt="" class="case-image">
-                </div>
-                <div class="v-space S"></div>
-
-                <!-- <div class="case-description">
-                    <p>Это было открытое тестовое в&nbsp;Прагматике. Хотели свежий взгляд на&nbsp;заставки
-                        для&nbsp;своих ботов.
-                        Условие одно: просто покреативить.
+                    <p class="project-card__title">
+                        Логотип кофейни
                     </p>
-                    <p>Нашёл рефы в&nbsp;пинтересте, попиксельно отрисовал в&nbsp;фигме, анимировал в&nbsp;Jitter.</p>
-                    <p>Сделал просто яркие, сочные и&nbsp;залипательные штуки. Создавались в&nbsp;вакууме,
-                        но&nbsp;привлекают
-                        внимание
-                        моментально, значит работают.</p>
-                    <p>Горжусь ими, но&nbsp;на&nbsp;работу не&nbsp;позвали.</p>
-                </div> -->
+                </article>
 
-            </article>
 
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
+                <article class="project-card project-card--vkusvill mobile-span-4"
+                    data-categories="communications posters">
 
-            <!-- Проект: Деловоз -->
-            <!-- Подставь в style точный RGB-цвет заголовка Деловоза из Фигмы -->
-            <article class="portfolio-case">
+                    <div class="project-card__media">
+                        <img src="./images/vkusvill-preview.webp" alt="Наружная реклама для ВкусВилла"
+                            class="project-card__image" draggable="false">
+                    </div>
 
-                <!-- ЗАЛИПАЮЩИЙ ЗАГОЛОВОК С ЛИНИЕЙ -->
-                <div class="case-header-sticky">
-                    <h2 class="case-title">Сайт и&nbsp;коммуникации&nbsp;Деловоза</h2>
-                </div>
-
-                <div class="v-space S"></div>
-
-                <!-- МАКЕТ САЙТА ДЕЛОВОЗА -->
-                <!-- Укажи путь к экспортированному скрину интерфейса -->
-                <img src="./images/DELOVOZ.webp" alt="Интерфейс сайта компании грузоперевозок «Деловоз»"
-                    class="case-image bordered">
-
-                <div class="v-space S"></div>
-                <div class="case-description">
-                    <p>Построил коммуникацию Деловоза с&nbsp;людьми. Сформулировал отличительные особенности компании
-                        с&nbsp;её
-                        ценностями и&nbsp;упаковал это всё на&nbsp;сайте.
+                    <p class="project-card__title">
+                        Наружная реклама для ВкусВилла
                     </p>
-                    <p class="accent-text">«Должно быть легко стать постоянным клиентом, доверять сервису ценные
-                        и&nbsp;хрупкие вещи. Что‑то
-                        должно вызвать ощущение что доставка будет быстрой, а&nbsp;товары придут целыми.» —
-                        Илья, СЕО Деловоза</p>
-                </div>
-
-                <img src="./images/delovoz-2.webp" alt="Раздел «О принципах Деловоза»"
-                    class="case-image-secondary bordered">
-                <div class="v-space S"></div>
-                <div class="case-description">
-                    <p>Для&nbsp;решения задачи на&nbsp;сайте рассказываем про&nbsp;реальные достижения, подкрепляем
-                        цифрами и&nbsp;даём
-                        ссылки на&nbsp;отзывы. Рассказываем про&nbsp;принципы работы компании без&nbsp;корпоративных
-                        штампов.</p>
-                </div>
-            </article>
+                </article>
 
 
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-
-            <!-- Проект: Графические и коммуникационные штуки -->
-            <article class="portfolio-case">
-
-                <!-- ЗАЛИПАЮЩИЙ ЗАГОЛОВОК С ЛИНИЕЙ -->
-                <div class="case-header-sticky">
-                    <h2 class="case-title">Графические, вебовые и&nbsp;артовые штуки</h2>
-                </div>
-
-                <div class="v-space S"></div>
-
-                <!-- СЕТКА "MASONRY" (как в Pinterest) -->
-                <div class="case-gallery-masonry">
-
-                    <video src="./images/letter-io.mp4" class="case-image" autoplay loop muted playsinline></video>
-                    <img src="./images/dieter_rams1.webp" alt="Дитер Рамс" class="case-image">
 
 
-                    <video src="./images/letter-d.mp4" class="case-image" autoplay loop muted playsinline></video>
-                    <img src="./images/menu_horizontal.webp" alt="Меню горизонтальное" class="case-image">
+                <article class="project-card project-card--calculator project-card--linked mobile-span-6"
+                    data-categories="own-products">
 
-                    <img src="./images/menu_vertical.webp" alt="Меню вертикальное" class="case-image">
+                    <a href="https://chtokchemu.ru/" class="project-card__media">
+                        <img src="./images/chtokchemu-preview.webp" alt="Калькулятор финансовой грамотности"
+                            class="project-card__image" draggable="false">
+                    </a>
 
+                    <p class="project-card__title">
+                        Калькулятор финансовой грамотности в вебе&nbsp;&rarr;
+                    </p>
+                </article>
 
-                    <img src="./images/poison_2.webp" alt="Poison" class="case-image">
-                    <video src="./images/hs-82-1.mp4" class="case-image" autoplay loop muted playsinline></video>
+                <article class="project-card project-card--pragmatica mobile-span-6" data-categories="communications">
 
-                    <img src="./images/rectangle_73.webp" alt="Прямоугольник 73" class="case-image">
+                    <div class="project-card__media pragmatica-preview" data-pragmatica-gallery
+                        aria-label="Анимированные карточки чат-ботов Прагматики">
+                        <video class="pragmatica-preview__video is-active" autoplay muted loop playsinline preload="auto"
+                            aria-hidden="true">
+                            <source src="./videos/pragmatica-grade.mp4" type="video/mp4">
+                        </video>
 
-                    <img src="./images/brodovich.webp" alt="Бродович" class="case-image">
+                        <video class="pragmatica-preview__video" autoplay muted loop playsinline preload="auto"
+                            aria-hidden="true">
+                            <source src="./videos/pragmatica-matrix.mp4" type="video/mp4">
+                        </video>
 
-                    <img src="./images/rectangle_72.webp" alt="Прямоугольник 72" class="case-image">
+                        <video class="pragmatica-preview__video" autoplay muted loop playsinline preload="auto"
+                            aria-hidden="true">
+                            <source src="./videos/pragmatica-salary.mp4" type="video/mp4">
+                        </video>
+                    </div>
 
-                    <video src="./images/letter-b.mp4" class="case-image" autoplay loop muted playsinline></video>
+                    <p class="project-card__title">
+                        Чат-боты Прагматики
+                    </p>
+                </article>
 
-                    <img src="./images/filter_11.webp" alt="Прямоугольник 72" class="case-image">
+            </section>
 
-
-                </div>
-
-                <div class="v-space L"></div>
-
-                <p class="header-desc">
-                    Алан Цахилов, 24 &#10003;
-                </p>
-            </article>
 
         </main>
+        <div class="ids__space M"></div>
+        <div class="ids__space M"></div>
     </div>
 
-    <!-- Скрипт просто для демонстрации переключения языков -->
-    <script>
-        const langLinks = document.querySelectorAll('.lang-switcher a');
-
-        langLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Чтобы страница не прыгала наверх при клике на "#"
-
-                // Убираем класс active у всех
-                langLinks.forEach(l => l.classList.remove('active'));
-
-                // Вешаем класс active на тот элемент, по которому кликнули
-                this.classList.add('active');
-            });
-        });
-    </script>
 </body>
-
-</html>

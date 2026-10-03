@@ -1,52 +1,83 @@
-// Список фраз для перебора
-const words = [
-    "верстальщик",
-    "редактор",
-    "стартапер",
-    "кальянщик",
-    "программист",
-    "безработный.."
-];
+const filterButtons = document.querySelectorAll('.portfolio-filter__button');
+const projectCards = document.querySelectorAll('.project-card');
+const galleries = document.querySelectorAll('[data-inline-gallery]');
 
-const typewriterEl = document.getElementById("typewriter");
+let activeFilter = null;
 
-let wordIndex = 0;
-let charIndex = words[0].length; // Стартуем с уже выведенного слова
-let isDeleting = true; // Сначала стираем стартовое слово
+function applyFilter(filter) {
+    projectCards.forEach((card) => {
+        const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean);
+        const shouldShow = !filter || categories.includes(filter);
+        card.classList.toggle('is-hidden', !shouldShow);
+    });
 
-// Настройки таймингов (в миллисекундах)
-const TYPING_SPEED = 90;      // Скорость печати одной буквы
-const DELETING_SPEED = 45;    // Скорость стирания (обычно быстрее набора)
-const HOLD_BEFORE_DELETE = 1800; // Пауза перед тем, как начать стирать слово
-const HOLD_BEFORE_TYPE = 400;   // Пауза перед набором следующего слова
-
-function typeLoop() {
-    const currentWord = words[wordIndex];
-
-    if (isDeleting) {
-        charIndex--;
-        typewriterEl.textContent = currentWord.substring(0, charIndex);
-    } else {
-        charIndex++;
-        typewriterEl.textContent = currentWord.substring(0, charIndex);
-    }
-
-    let delay = isDeleting ? DELETING_SPEED : TYPING_SPEED;
-
-    // Когда слово напечатано целиком
-    if (!isDeleting && charIndex === currentWord.length) {
-        delay = HOLD_BEFORE_DELETE;
-        isDeleting = true;
-    } 
-    // Когда слово полностью стерто
-    else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length; // Переход к следующему слову по кругу
-        delay = HOLD_BEFORE_TYPE;
-    }
-
-    setTimeout(typeLoop, delay);
 }
 
-// Запускаем через небольшую паузу после загрузки страницы
-setTimeout(typeLoop, HOLD_BEFORE_DELETE);
+filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        const isSameFilter = activeFilter === filter;
+
+        activeFilter = isSameFilter ? null : filter;
+
+        filterButtons.forEach((item) => {
+            item.setAttribute('aria-pressed', String(item.dataset.filter === activeFilter));
+        });
+
+        applyFilter(activeFilter);
+    });
+});
+
+function updateInlineGallery(gallery, clientX) {
+    const images = Array.from(gallery.querySelectorAll(':scope > img'));
+    if (!images.length) return;
+
+    const rect = gallery.getBoundingClientRect();
+    const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+    const progress = rect.width ? x / rect.width : 0;
+    const index = Math.min(images.length - 1, Math.floor(progress * images.length));
+
+    images.forEach((image, imageIndex) => {
+        image.style.visibility = imageIndex === index ? 'visible' : 'hidden';
+    });
+}
+
+galleries.forEach((gallery) => {
+    gallery.addEventListener('pointermove', (event) => {
+        updateInlineGallery(gallery, event.clientX);
+    });
+
+    gallery.addEventListener('touchmove', (event) => {
+        const touch = event.touches[0];
+        if (touch) updateInlineGallery(gallery, touch.clientX);
+    }, { passive: true });
+});
+
+
+const pragmaticaGalleries = document.querySelectorAll('[data-pragmatica-gallery]');
+
+function updatePragmaticaGallery(gallery, clientX) {
+    const videos = Array.from(gallery.querySelectorAll('.pragmatica-preview__video'));
+    if (!videos.length) return;
+
+    const rect = gallery.getBoundingClientRect();
+    const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+    const progress = rect.width ? x / rect.width : 0;
+    const index = Math.min(videos.length - 1, Math.floor(progress * videos.length));
+
+    videos.forEach((video, videoIndex) => {
+        video.classList.toggle('is-active', videoIndex === index);
+        video.style.zIndex = String(3 - Math.abs(videoIndex - index));
+    });
+}
+
+pragmaticaGalleries.forEach((gallery) => {
+    gallery.addEventListener('pointermove', (event) => {
+        updatePragmaticaGallery(gallery, event.clientX);
+    });
+
+    gallery.addEventListener('touchmove', (event) => {
+        const touch = event.touches[0];
+        if (touch) updatePragmaticaGallery(gallery, touch.clientX);
+    }, { passive: true });
+});
