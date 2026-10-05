@@ -55,8 +55,10 @@ IDS здесь не зависимость: нужные решения копи
 │   └── case-ads/              # изображения кейса объявлений
 │
 ├── projects/
-│   └── ads/
-│       └── index.html         # кейс «Человечные объявления в лифте»
+│   ├── ads/
+│   │   └── index.html         # кейс «Человечные объявления в лифте»
+│   └── ads-guide/
+│       └── index.html         # гайд «Как писать объявления в лифтах…»
 │
 └── delovoz/                   # отдельный «живой» сайт проекта Деловоз
     ├── index.html
@@ -103,7 +105,7 @@ IDS здесь не зависимость: нужные решения копи
 
 Кликабельность сейчас:
 - Деловоз → `./delovoz/`;
-- Человечные объявления → `./projects/ads/`;
+- Человечные объявления → `./projects/company-announcement.html`;
 - Калькулятор финансовой грамотности → `https://chtokchemu.ru/`;
 - остальные карточки временно некликабельны и не получают ссылочный hover подписи.
 
@@ -117,7 +119,7 @@ IDS здесь не зависимость: нужные решения копи
 
 `about.html` и все страницы проектов считаются одним типом страницы и используют один `style.css`.
 
-Первый кейс и мастер-пример: `projects/ads/index.html`.
+Первый кейс и мастер-пример: `projects/company-announcement.html`.
 
 ### Общая база
 `style.css` повторяет визуальную основу `home.css`:
@@ -162,6 +164,11 @@ IDS здесь не зависимость: нужные решения копи
 </section>
 ```
 
+### Гайд про объявления
+Путь: `projects/announcement-guide.html`. Это внутренняя страница на общей базе `style.css`. Стили гайда — левое оглавление, разделители и карточки примеров — находятся в конце общего `style.css`; отдельного `guide.css` нет. Новые стили для внутренних страниц по возможности дописывать в этот же файл.
+
+На главной гайд добавлен отдельной кликабельной карточкой с временным серым кругом вместо превью.
+
 ### Универсальные изображения
 Текущий кейс также использует нейтральные классы:
 - `.content-gallery`;
@@ -179,9 +186,6 @@ IDS здесь не зависимость: нужные решения копи
 - интро занимает 100% wrapper;
 - фильтр на mobile состоит из двух строк: заголовок отдельно, пилюли ниже в одной горизонтально прокручиваемой ленте до правого края viewport;
 - мобильная галерея использует 6 колонок и utility-классы `mobile-span-1` … `mobile-span-6`, поэтому карточки не обязаны быть полноширинными; текущая раскладка: Деловоз 6, объявления 4, кофейня 2, ВкусВилл 3, калькулятор 6, Прагматика 6.
-
-### Переходы между внутренними страницами
-`script.js` создаёт белый overlay `.page-transition`. Для внутренних ссылок текущего origin он за 0.5 секунды закрывает страницу снизу вверх и только после этого выполняет навигацию. CSS для overlay продублирован в `home.css` и `style.css`. Внутренние страницы должны подключать общий `script.js`, чтобы такой же эффект работал при возврате на главную.
 
 ### Mobile внутренних страниц
 Если у `.content-label` несколько смысловых лейблов, оборачивать каждый в `.content-label__item`, а разделитель — в `.content-label__separator`. На desktop они идут в одну строку, на mobile каждый item становится отдельной строкой, разделитель скрывается.
@@ -303,6 +307,8 @@ Hover-логика:
 
 ## 7. Текущее состояние / что ещё не закончено
 
+- `style.css` — единственный CSS-файл для `about.html` и кейсов, включая `projects/announcement-guide.html`; специфичные стили гайда находятся в нём же.
+- Общий `script.js` также содержит логику активного пункта левого оглавления гайда.
 - Главная портфолио собрана. Кликабельны Деловоз, кейс объявлений и внешний финансовый калькулятор; остальные превью пока намеренно некликабельны.
 - Кейс «Человечные объявления в лифте» переведён на универсальные `.content-*` классы и задаёт мастер-шаблон внутренних страниц вместе с `about.html`.
 - Деловоз уже существует как отдельный живой статичный сайт.
@@ -348,8 +354,6 @@ Hover-логика:
 - Homepage projects collapse to one full-width column.
 - The same shortened mobile topbar behavior is also present in `style.css` for About/project pages.
 
-## Page transition v32
-- Internal page navigation uses a white bottom-to-top wipe lasting 0.35 s.
 - The wipe has z-index 90 while the shared topbar stays at z-index 100, so the navigation remains visible and does not get covered.
 - On destination load, only `main` fades in from white over 0.03 s; the topbar does not animate.
 
@@ -364,12 +368,18 @@ Hover-логика:
 
 ## 2026-10-03 — Favicon
 - Personal favicon added site-wide from Alan's portrait.
-- Browser favicon uses the circular transparent source; files in project root: `favicon.ico`, `favicon.png`, `favicon-32.png`, `favicon-192.png`.
+- Browser favicon uses the circular transparent source; canonical portfolio favicon assets live in `images/`: `favicon.ico`, `favicon.png`, `favicon-32.png`, `favicon-192.png`, plus `apple-touch-icon.png`. Root compatibility copies of the four files referenced by untouched `delovoz/index.html` are intentionally retained.
 - `apple-touch-icon.png` is generated from the square portrait because Apple applies its own icon mask.
-- Favicon links are present in `index.html`, `about.html`, `projects/ads/index.html`, and `delovoz/index.html`.
+- Portfolio favicon links point to `images/` in `index.html`, `about.html`, `projects/company-announcement.html`, and `projects/announcement-guide.html`. `delovoz/index.html` remains untouched and still uses root compatibility copies.
 
 ## 2026-10-03 — Search and social preview metadata
-- Added `og-cover.png` (1200×630 PNG) from Alan's supplied signature artwork.
+- Added `images/og-cover.png` (1200×630 PNG) from Alan's supplied signature artwork.
 - Homepage now has canonical URL, Open Graph metadata, Twitter large-card metadata, and `WebSite` JSON-LD.
-- `about.html` and `projects/ads/index.html` have page-specific canonical/Open Graph/Twitter metadata while reusing the same `og-cover.png`.
+- `about.html` and `projects/company-announcement.html` have page-specific canonical/Open Graph/Twitter metadata while reusing the same `images/og-cover.png`.
 - Delovoz metadata was intentionally left separate from the portfolio social-preview setup.
+
+## 2026-10-05 — Structure cleanup
+- `projects/` is flat: `company-announcement.html` and `announcement-guide.html`; the old `projects/ads/` and `projects/ads-guide/` folders were removed.
+- Portfolio favicon assets and `og-cover.png` live under `images/`.
+- `delovoz/` was left byte-for-byte unchanged. Root favicon compatibility copies remain only because `delovoz/index.html` references them.
+- Internal paths, canonical URLs, Open Graph URLs, project links, CSS/JS/image references, and PT Root UI preload paths were updated for the new structure.
