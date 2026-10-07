@@ -9,13 +9,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="preload" href="./fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/Montserrat-Italic-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./css/delovoz.css">
 </head>
 <body>
   <header class="topbar">
     <div class="topbar__inner">
       <a class="brand" href="#top" aria-label="Деловоз — на главную">
-        <img src="./images/delovoz-logo.svg" alt="Деловоз">
+        <img src="./images/delovoz-logo.svg" alt="Деловоз" width="153" height="24">
       </a>
 
 
@@ -153,7 +155,7 @@
               <option>Владикавказ</option>
             </select>
             <button id="calc-swap" class="calculator-route__swap" type="button" aria-label="Поменять города местами">
-              <img src="./images/arrows-down-up.svg" alt="">
+              <img src="./images/arrows-down-up.svg" alt="" width="24" height="24">
             </button>
             <select id="calc-to" class="calculator-route__city" aria-label="Город назначения">
               <option>Санкт-Петербург</option>
@@ -392,7 +394,7 @@
             ${numberInput('Вес', item.weight, 'кг', 1, 5000)}
           </div>
           <button type="button" class="calculator-item__delete" aria-label="Удалить вещь">
-            <img src="./images/trash.svg" alt="">
+            <img src="./images/trash.svg" alt="" width="23" height="23">
           </button>`;
 
         const select = row.querySelector('select');

@@ -10,7 +10,6 @@ function applyFilter(filter) {
         const shouldShow = !filter || categories.includes(filter);
         card.classList.toggle('is-hidden', !shouldShow);
     });
-
 }
 
 filterButtons.forEach((button) => {
@@ -28,60 +27,69 @@ filterButtons.forEach((button) => {
     });
 });
 
-function updateInlineGallery(gallery, clientX) {
+galleries.forEach((gallery) => {
     const images = Array.from(gallery.querySelectorAll(':scope > img'));
     if (!images.length) return;
 
-    const rect = gallery.getBoundingClientRect();
-    const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
-    const progress = rect.width ? x / rect.width : 0;
-    const index = Math.min(images.length - 1, Math.floor(progress * images.length));
+    let activeIndex = 0;
+    let pendingClientX = null;
+    let animationFrame = null;
+    let isReady = false;
 
-    images.forEach((image, imageIndex) => {
-        image.style.visibility = imageIndex === index ? 'visible' : 'hidden';
+    const decodeImage = (image) => {
+        if (typeof image.decode === 'function') {
+            return image.decode().catch(() => undefined);
+        }
+
+        if (image.complete) return Promise.resolve();
+
+        return new Promise((resolve) => {
+            image.addEventListener('load', resolve, { once: true });
+            image.addEventListener('error', resolve, { once: true });
+        });
+    };
+
+    const render = () => {
+        animationFrame = null;
+        if (!isReady || pendingClientX === null) return;
+
+        const rect = gallery.getBoundingClientRect();
+        const x = Math.min(Math.max(pendingClientX - rect.left, 0), rect.width);
+        const progress = rect.width ? x / rect.width : 0;
+        const nextIndex = Math.min(images.length - 1, Math.floor(progress * images.length));
+
+        if (nextIndex !== activeIndex) {
+            images[activeIndex].style.visibility = 'hidden';
+            images[nextIndex].style.visibility = 'visible';
+            activeIndex = nextIndex;
+        }
+    };
+
+    const queueRender = (clientX) => {
+        pendingClientX = clientX;
+        if (!isReady || animationFrame !== null) return;
+
+        animationFrame = window.requestAnimationFrame(render);
+    };
+
+    // Inline galleries are small after image optimization. Decode every frame up front
+    // so the first pointer movement never triggers a visible load/decode hitch.
+    Promise.all(images.map(decodeImage)).then(() => {
+        isReady = true;
+        if (pendingClientX !== null && animationFrame === null) {
+            animationFrame = window.requestAnimationFrame(render);
+        }
     });
-}
 
-galleries.forEach((gallery) => {
     gallery.addEventListener('pointermove', (event) => {
-        updateInlineGallery(gallery, event.clientX);
-    });
+        queueRender(event.clientX);
+    }, { passive: true });
 
     gallery.addEventListener('touchmove', (event) => {
         const touch = event.touches[0];
-        if (touch) updateInlineGallery(gallery, touch.clientX);
+        if (touch) queueRender(touch.clientX);
     }, { passive: true });
 });
-
-
-const pragmaticaGalleries = document.querySelectorAll('[data-pragmatica-gallery]');
-
-function updatePragmaticaGallery(gallery, clientX) {
-    const videos = Array.from(gallery.querySelectorAll('.pragmatica-preview__video'));
-    if (!videos.length) return;
-
-    const rect = gallery.getBoundingClientRect();
-    const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
-    const progress = rect.width ? x / rect.width : 0;
-    const index = Math.min(videos.length - 1, Math.floor(progress * videos.length));
-
-    videos.forEach((video, videoIndex) => {
-        video.classList.toggle('is-active', videoIndex === index);
-        video.style.zIndex = String(3 - Math.abs(videoIndex - index));
-    });
-}
-
-pragmaticaGalleries.forEach((gallery) => {
-    gallery.addEventListener('pointermove', (event) => {
-        updatePragmaticaGallery(gallery, event.clientX);
-    });
-
-    gallery.addEventListener('touchmove', (event) => {
-        const touch = event.touches[0];
-        if (touch) updatePragmaticaGallery(gallery, touch.clientX);
-    }, { passive: true });
-});
-
 
 const guideNavLinks = Array.from(document.querySelectorAll('.guide-nav__link'));
 

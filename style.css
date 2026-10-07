@@ -81,8 +81,8 @@ body {
     margin: 0;
     color: rgb(var(--text));
     background: rgb(var(--background));
-    font-family: "PT Root UI";
-    line-height: var(--ids__density);
+    font-family: "PT Root UI", Arial, sans-serif;
+    line-height: 1.25;
     font-weight: 400;
 }
 
@@ -185,6 +185,7 @@ strong {
 
 .home-topbar__avatar {
     width: 2.3rem;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: .65rem;
 }
@@ -294,7 +295,7 @@ strong {
 
 /* Content enter */
 
-main {
+/* main {
     animation: content-enter .3s linear both;
 }
 
@@ -306,7 +307,7 @@ main {
     to {
         opacity: 1;
     }
-}
+} */
 
 
 /* Mobile */
