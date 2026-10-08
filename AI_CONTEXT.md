@@ -383,3 +383,9 @@ Hover-логика:
 - Portfolio favicon assets and `og-cover.png` live under `images/`.
 - `delovoz/` was left byte-for-byte unchanged. Root favicon compatibility copies remain only because `delovoz/index.html` references them.
 - Internal paths, canonical URLs, Open Graph URLs, project links, CSS/JS/image references, and PT Root UI preload paths were updated for the new structure.
+
+## 2026-10-08 — Clean URLs and absolute paths
+- Portfolio internal pages use directory-based clean URLs: `/about/`, `/projects/company-announcement/`, `/projects/announcement-guide/`, `/projects/concept/`.
+- Their source files are `index.html` inside matching directories.
+- Portfolio asset/navigation paths are root-relative absolute paths (`/images/...`, `/fonts/...`, `/style.css`, `/home.css`, `/script.js`, etc.) so nesting changes do not break them.
+- `delovoz/` remains isolated and was not rewritten.
