@@ -389,3 +389,10 @@ Hover-логика:
 - Their source files are `index.html` inside matching directories.
 - Portfolio asset/navigation paths are root-relative absolute paths (`/images/...`, `/fonts/...`, `/style.css`, `/home.css`, `/script.js`, etc.) so nesting changes do not break them.
 - `delovoz/` remains isolated and was not rewritten.
+
+## Концепты — внутренняя страница /projects/concept/ (2026-10-09)
+- Шаблон страницы: общий `style.css`, `content-wrapper.S` для всех блоков кроме ряда «Прагматика» с `content-wrapper.M`.
+- Интро: label «Штуки делаются с 2024 года»; H1 «Это концепты, личные проекты, и просто артовые штуки»; лид пользователя; горизонтальный разделитель.
+- Порядок медиа: 2 меню → логотип меню → filter-11 / dieter-rams / poison-drop → видео hs-82 → 3 видео Прагматики (M) → 3 постера ВкусВилла → видео bukva-e на половине ширины S → видео bukva-d / bukva-b.
+- Изображения в `/images/concept/`, видео в `/videos/concept/`, для видео сгенерированы постеры. Все видео autoplay muted loop playsinline; на мобильном ряды перестраиваются в одну колонку.
+- Остальные страницы и `delovoz/` не изменять для этой задачи.
