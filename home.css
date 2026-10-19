@@ -339,7 +339,7 @@ img {
 /* Concept inline gallery */
 
 .concept-inline-gallery>img {
-    aspect-ratio: 1392 / 456;
+    /* aspect-ratio: 1392 / 456; */
     object-fit: contain;
 }
 
