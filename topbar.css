@@ -1,0 +1,98 @@
+.home-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    font-weight: 400;
+    padding: .5rem 0 .3rem;
+
+    border-bottom: 1px solid rgba(var(--text), .1);
+
+    isolation: isolate;
+}
+
+.home-topbar::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    inset-block: 0;
+    left: -1.5%;
+    right: -1.5%;
+
+    background: rgb(var(--background));
+}
+
+.home-topbar__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+
+    gap: 10rem;
+
+    font-size: var(--font-size-top);
+}
+
+.home-topbar__identity {
+    display: flex;
+    align-items: center;
+
+    gap: .5rem;
+}
+
+.home-topbar__avatar {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+.home-topbar__language {
+    color: rgba(var(--text), .2);
+}
+
+/* Contact button */
+
+.home-topbar__contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 1.8rem;
+    padding: .9rem;
+
+    border-radius: .4rem;
+    background: rgb(var(--text));
+
+    color: rgb(var(--background));
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color var(--link-transition);
+}
+
+.home-topbar__contact:hover,
+.home-topbar__contact:focus-visible {
+    background: rgb(var(--hover));
+    color: rgb(var(--background));
+
+    transition-duration: 0s;
+}
+
+@media (max-width: 767px) {
+
+    .home-topbar__inner {
+        gap: 2rem;
+    }
+
+    .home-topbar__surname,
+    .home-topbar__role {
+        display: none;
+    }
+
+    /* Такой же размер, как на главной: раньше здесь было 2rem. */
+    .home-topbar__avatar {
+        width: 2.3rem;
+    }
+}
