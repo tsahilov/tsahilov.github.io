@@ -70,6 +70,9 @@
     white-space: nowrap;
 
     transition: background-color var(--link-transition);
+    @media (max-width: 767px) {
+        height: 2.3rem;
+    }
 }
 
 .home-topbar__contact:hover,

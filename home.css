@@ -1,4 +1,3 @@
-
 /* Base */
 
 * {
@@ -63,35 +62,11 @@ img {
 }
 
 
-.ids__space.XS {
-    height: .5rem;
-}
-
-
-.ids__space.S {
-    height: 1rem;
-}
-
-
-.ids__space.M {
-    height: 2rem;
-}
-
-
-.ids__space.L {
-    height: 4rem;
-}
-
-
-.ids__space.XL {
-    height: 6rem;
-}
-
 
 /* Home intro */
 
 .home-signature {
-    width: 18rem;
+    width: 10rem;
     height: auto;
 }
 
@@ -190,7 +165,7 @@ img {
 
 .projects-gallery {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: repeat(18, 1fr);
     grid-auto-flow: dense;
 
     gap: 2.8rem 1.2rem;
@@ -221,33 +196,52 @@ img {
 
 /* Project sizes */
 
-.project-card--delovoz {
-    grid-column: span 6;
-}
-
-
-.project-card--ads {
-    grid-column: span 6;
-}
-
-
-.project-card--longread {
-    grid-column: span 4;
-}
-
-
-.project-card--concept {
-    grid-column: span 4;
-}
-
-.project-card--guide {
-    grid-column: span 6;
-}
 
 .project-card--calculator {
     grid-column: span 6;
 }
 
+.project-card--ads {
+    grid-column: span 8;
+}
+
+
+.project-card--navtable {
+    grid-column: span 4;
+}
+
+/* stroke two */
+
+.project-card--rouk {
+    grid-column: span 5;
+}
+
+.project-card--deadline {
+    grid-column: span 6;
+}
+
+.project-card--guide {
+    grid-column: span 7;
+}
+
+/* on table */
+
+.project-card--delovoz {
+    grid-column: span 6;
+}
+
+.project-card--concept {
+    grid-column: span 4;
+}
+
+/* Пока у игры нет обложки */
+
+.deadline-preview {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgb(var(--text));
+    border-radius: .8rem;
+}
 
 
 
@@ -301,6 +295,21 @@ img {
     transition-duration: 0s;
 }
 
+.project-card__name {
+    font-weight: 600;
+}
+
+.project-card__separator {
+    font-weight: 300;
+    color: rgb(var(--muted-light));
+    margin: 0;
+}
+
+.project-card__description {
+    color: rgb(var(--muted-light));
+    font-weight: 400;
+}
+
 
 /* Inline gallery */
 
@@ -351,6 +360,13 @@ img {
     object-fit: contain;
 }
 
+
+/* Calculator inline gallery */
+
+.calculator-inline-gallery>img {
+    aspect-ratio: 2400 / 1262;
+    object-fit: contain;
+}
 
 /* Content enter */
 
@@ -486,5 +502,118 @@ img {
 @media (prefers-reduced-motion: reduce) {
     main {
         animation: none;
+    }
+}
+
+
+/* Showcase */
+
+.projects-showcase {
+    --table-width: 45%;
+    --side-width: 45%;
+    --first-card-width: 95%;
+    --second-card-width: 80%;
+    --showcase-gap: 1.6rem;
+
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--showcase-gap);
+}
+
+/* Карточки справа */
+
+.projects-showcase>.more-projects {
+    flex: 0 0 var(--table-width);
+}
+
+.projects-showcase__side {
+    flex: 0 0 var(--side-width);
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .1rem;
+}
+
+.projects-showcase__side>.project-card--delovoz {
+    width: var(--first-card-width);
+}
+
+.projects-showcase__side>.project-card--concept {
+    width: var(--second-card-width);
+}
+
+/* Таблица */
+
+.more-projects {
+    min-width: 0;
+    padding: 1.1rem 1rem 4.9rem 1.3rem;
+    border-radius: .6rem;
+
+    background: linear-gradient(180deg,
+            #55f568 0%,
+            #67a6a5 50%,
+            #793bd2 100%);
+
+    color: white;
+    font-size: var(--font-size-description);
+}
+
+.more-projects__title {
+    margin: 0 0 .9rem;
+    font-size: inherit;
+    font-weight: 600;
+}
+
+.more-projects__table,
+.more-projects__table tbody {
+    display: block;
+    width: 100%;
+}
+
+.more-projects__table tr {
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding: .4rem 0 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
+.more-projects__table td {
+    display: block;
+    padding: 0;
+}
+
+.more-projects__year {
+    /* margin-bottom: .3rem; */
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.more-projects__table tr:last-child {
+    padding-bottom: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .projects-showcase {
+        flex-direction: column;
+        gap: 2.6rem;
+    }
+
+    .projects-showcase>.more-projects,
+    .projects-showcase__side,
+    .projects-showcase__side>.project-card {
+        width: 100%;
+        flex: none;
+    }
+
+    .more-projects {
+        padding: 1rem .8rem 3rem;
     }
 }
