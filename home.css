@@ -392,19 +392,6 @@ img {
 @media (max-width: 767px) {
 
 
-    /* Header */
-
-    .home-topbar__inner {
-        gap: 2rem;
-    }
-
-
-    .home-topbar__surname,
-    .home-topbar__role {
-        display: none;
-    }
-
-
     /* Intro */
 
     .home-intro__about {

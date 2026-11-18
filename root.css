@@ -4,7 +4,7 @@
 
     --text: 47, 47, 47;
     --text-case: 69, 69, 69;
-    --label: 161, 194, 198;
+    --label: 255, 83, 17;
     --muted: 168, 168, 168;
     --muted-light: 218, 218, 218;
     --background: 255, 255, 255;
@@ -18,8 +18,8 @@
     --font-size-top: 1rem;
 
     --font-size-label: .75rem;
-    --font-size-h1: 2.3rem;
-    --font-size-h2: 1.5rem;
+    --font-size-h1: 1.8rem;
+    --font-size-h2: 1rem;
     --font-size-main: 1rem;
     --font-size-case: 1.1rem;
     --font-size-description: .8rem;
@@ -29,9 +29,9 @@
 
         --font-size-top: 1.4rem;
 
-        --font-size-label: .9rem;
-        --font-size-h1: 2.25rem;
-        --font-size-h2: 1.6rem;
+        --font-size-label: .8rem;
+        --font-size-h1: 1.8rem;
+        --font-size-h2: 1.1rem;
         --font-size-main: 1.1rem;
         --font-size-description: .9rem;
     }

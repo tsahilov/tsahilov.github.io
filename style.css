@@ -51,16 +51,15 @@ strong {
     margin-inline: auto;
 }
 
-.content-wrapper.S {
-    width: 60%;
-}
-
-.content-wrapper.M {
-    width: 74%;
-}
-
+.content-wrapper.S,
+.content-wrapper.M,
 .content-wrapper.L {
-    width: 100%;
+    width: 80%;
+}
+
+.content-page main > .content-wrapper {
+    margin-inline: var(--topbar-content-inset) 0;
+    max-inline-size: calc(100% - var(--topbar-content-inset));
 }
 
 
@@ -80,18 +79,20 @@ strong {
 }
 
 .content-title {
+    /* max-inline-size: 25ch; */
     margin: 0 0 1.4rem;
     font-size: var(--font-size-h1);
     line-height: 1;
-    font-weight: 800;
+    font-weight: 400;
     /* letter-spacing: -0.01rem; */
 }
 
 .content-subtitle {
-    margin: 0 0 .8rem;
+    /* margin: 0 0 .8rem; */
+    margin: 0;
     font-size: var(--font-size-h2);
-    line-height: 1.15;
-    font-weight: 400;
+    line-height: 1.35;
+    font-weight: 600;
 }
 
 .content-copy {
@@ -103,6 +104,7 @@ strong {
 
 .content-copy p {
     margin: 0 0 .4rem;
+    width: 85%;
 }
 
 .content-copy .content-link {
@@ -143,6 +145,7 @@ strong {
 .content-image {
     width: 100%;
     height: auto;
+    border-radius: .5rem;
 }
 
 .content-caption {
@@ -156,6 +159,11 @@ strong {
 /* Mobile */
 
 @media (max-width: 767px) {
+
+    .content-page main > .content-wrapper {
+        margin-inline: 0;
+        max-inline-size: 100%;
+    }
 
     .content-wrapper.S,
     .content-wrapper.M,
@@ -209,7 +217,7 @@ strong {
 
 .guide-example {
     width: 80%;
-    margin: 1.6rem 0 1.6rem 1.2rem;
+    margin: 1.6rem 0;
 }
 
 .guide-example__group+.guide-example__group {
@@ -321,7 +329,6 @@ strong {
 
 .concept-menu-logo {
     width: 75%;
-    margin-inline: auto;
 }
 
 .concept-half {
@@ -346,8 +353,8 @@ strong {
     }
 }
 
-.concept-page img,
-.concept-page video {
+.concept-page main img,
+.concept-page main video {
     border-radius: .4rem;
 }
 
@@ -451,12 +458,14 @@ strong {
     position: fixed;
     z-index: 20;
     top: 13rem;
+    inset-inline-end: 1.5vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: .35rem;
 
     width: clamp(9rem, calc(20vw - 2.5rem), 11rem);
+    max-inline-size: calc(97vw * .2 - var(--topbar-content-inset) - .5rem);
 
     font-size: var(--font-size-label);
     line-height: 1.1;
@@ -488,4 +497,3 @@ strong {
     height: auto;
     border-radius: .4rem;
 }
-

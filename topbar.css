@@ -1,101 +1,80 @@
+.ids__wrapper {
+    --topbar-control-size: 2rem;
+    --topbar-gap: .35rem;
+    --topbar-content-inset: calc(var(--topbar-control-size) + var(--topbar-gap));
+}
+
 .home-topbar {
     position: sticky;
     top: 0;
     z-index: 100;
 
-    font-weight: 400;
-    padding: .5rem 0 .3rem;
-
-    border-bottom: 1px solid rgba(var(--text), .1);
-
-    isolation: isolate;
-}
-
-.home-topbar::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    inset-block: 0;
-    left: -1.5%;
-    right: -1.5%;
-
-    background: rgb(var(--background));
-}
-
-.home-topbar__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-
-    gap: 10rem;
-
-    font-size: var(--font-size-top);
-}
-
-.home-topbar__identity {
     display: flex;
     align-items: center;
+    gap: var(--topbar-gap);
 
-    gap: .5rem;
+    padding: .5rem 0 .3rem;
+    font-size: var(--font-size-top);
+    font-weight: 400;
 }
 
 .home-topbar__avatar {
-    width: 2rem;
-    aspect-ratio: 1 / 1;
-
+    flex: none;
+    width: var(--topbar-control-size);
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius: .4rem;
+
+    border: none;
+    border-radius: 8px;
 }
 
-.home-topbar__language {
-    color: rgba(var(--text), .2);
-}
-
-/* Contact button */
-
+.home-topbar__name,
 .home-topbar__contact {
     display: inline-flex;
+    flex: none;
     align-items: center;
     justify-content: center;
 
-    height: 1.8rem;
-    padding: .9rem;
+    height: var(--topbar-control-size);
+    padding-inline: clamp(.45rem, 2.5vw, .9rem);
 
-    border-radius: .4rem;
-    background: rgb(var(--text));
-
-    color: rgb(var(--background));
+    border: .3px solid transparent;
     text-decoration: none;
     white-space: nowrap;
+}
 
+.home-topbar__name {
+    border-color: rgba(var(--text), .5);
+    border-radius: 24px 24px 24px 0;
+    /* background: #fff; */
+    transition:
+        color var(--link-transition),
+        border-color var(--link-transition);
+}
+
+.home-topbar__name:hover,
+.home-topbar__name:focus-visible {
+    color: rgb(var(--hover));
+    border-color: rgb(var(--hover));
+    transition-duration: 0s;
+}
+
+.home-topbar__contact {
+    border-radius: 24px 8px 8px 24px;
+    background: rgb(var(--text));
+    color: rgb(var(--background));
     transition: background-color var(--link-transition);
-    @media (max-width: 767px) {
-        height: 2.3rem;
-    }
 }
 
 .home-topbar__contact:hover,
 .home-topbar__contact:focus-visible {
     background: rgb(var(--hover));
     color: rgb(var(--background));
-
     transition-duration: 0s;
 }
 
 @media (max-width: 767px) {
-
-    .home-topbar__inner {
-        gap: 2rem;
-    }
-
-    .home-topbar__surname,
-    .home-topbar__role {
-        display: none;
-    }
-
-    /* Такой же размер, как на главной: раньше здесь было 2rem. */
-    .home-topbar__avatar {
-        width: 2.3rem;
+    .ids__wrapper {
+        --topbar-control-size: 2.3rem;
     }
 }

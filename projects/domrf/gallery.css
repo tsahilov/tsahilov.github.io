@@ -1,0 +1,21 @@
+.domrf-posts {
+    container-type: inline-size;
+}
+
+.domrf-post-grid {
+    --post-column-gap: min(12px, 1.06cqw);
+
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-areas:
+        "planet   .     deposit  wrench  swatch-a   folder  ."
+        ".        cards calendar .       megaphone  phone   clock"
+        "swatch-b crown .        cursor  keys       figure  .";
+    column-gap: var(--post-column-gap);
+    row-gap: calc(var(--post-column-gap) * 3.5);
+}
+
+@media (max-width: 767px) {
+    .domrf-icon-gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

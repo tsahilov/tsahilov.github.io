@@ -1,0 +1,20 @@
+.yandex-gallery,
+.yandex-gallery__pair {
+    gap: .65rem;
+}
+
+.yandex-gallery__pair--travel-creative {
+    grid-template-columns: minmax(0, 2400fr) minmax(0, 759fr);
+}
+
+.yandex-gallery__pair--travel-outdoor {
+    grid-template-columns: minmax(0, 1628fr) minmax(0, 1526fr);
+}
+
+.yandex-gallery__pair--market {
+    grid-template-columns: minmax(0, 635fr) minmax(0, 1037fr);
+}
+
+.yandex-gallery__pair--split {
+    grid-template-columns: minmax(0, 1224fr) minmax(0, 450fr);
+}
