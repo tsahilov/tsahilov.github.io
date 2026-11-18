@@ -82,8 +82,8 @@ strong {
     /* max-inline-size: 25ch; */
     margin: 0 0 1.4rem;
     font-size: var(--font-size-h1);
-    line-height: 1;
-    font-weight: 400;
+    line-height: 1.1;
+    font-weight: 700;
     /* letter-spacing: -0.01rem; */
 }
 
@@ -104,7 +104,7 @@ strong {
 
 .content-copy p {
     margin: 0 0 .4rem;
-    width: 85%;
+    width: 88%;
 }
 
 .content-copy .content-link {
