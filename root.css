@@ -156,3 +156,8 @@ html {
         width: 100%;
     }
 }
+
+.color {
+    color: rgb(var(--text-asside));
+    /* font-weight: 800; */
+}

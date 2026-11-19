@@ -44,9 +44,6 @@ strong {
 
 
 
-
-
-
 .content-wrapper {
     margin-inline: auto;
 }
@@ -57,7 +54,7 @@ strong {
     width: 80%;
 }
 
-.content-page main > .content-wrapper {
+.content-page main>.content-wrapper {
     margin-inline: var(--topbar-content-inset) 0;
     max-inline-size: calc(100% - var(--topbar-content-inset));
 }
@@ -160,7 +157,7 @@ strong {
 
 @media (max-width: 767px) {
 
-    .content-page main > .content-wrapper {
+    .content-page main>.content-wrapper {
         margin-inline: 0;
         max-inline-size: 100%;
     }
