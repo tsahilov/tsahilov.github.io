@@ -196,13 +196,20 @@ img {
 
 /* Project sizes */
 
+.project-card--domrf {
+    grid-column: span 6;
+}
+
+.project-card--yandex {
+    grid-column: span 5;
+}
 
 .project-card--calculator {
     grid-column: span 6;
 }
 
 .project-card--ads {
-    grid-column: span 8;
+    grid-column: span 7;
 }
 
 
@@ -213,7 +220,7 @@ img {
 /* stroke two */
 
 .project-card--rouk {
-    grid-column: span 5;
+    grid-column: span 8;
 }
 
 .project-card--deadline {
@@ -221,7 +228,7 @@ img {
 }
 
 .project-card--guide {
-    grid-column: span 7;
+    grid-column: span 18;
 }
 
 /* on table */
@@ -245,7 +252,9 @@ img {
 
 
 
-
+.solo-image {
+    border-radius: .5rem;
+}
 
 
 /* Media */
@@ -367,6 +376,32 @@ img {
     aspect-ratio: 2400 / 1262;
     object-fit: contain;
 }
+
+
+/* Обложка Яндекса — показывать изображения целиком */
+.project-card--yandex .project-card__media {
+    background-color: #fff;
+}
+
+.project-card--yandex .project-card__image {
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Выравнивание подписи на обложке Яндекса */
+.project-card--yandex .project-card__title {
+    box-sizing: border-box;
+    padding-left: 15%;
+}
+
+
+/* Пропорции инлайн-галереи Яндекса */
+.project-card--yandex .inline-gallery>img {
+    aspect-ratio: 542 / 245;
+    object-fit: contain;
+    object-position: center;
+}
+
 
 /* Content enter */
 
